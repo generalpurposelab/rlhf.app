@@ -1,4 +1,4 @@
-# Vercel AI SDK, Next.js, and Hugging Face Chat Example
+[# Vercel AI SDK, Next.js, and Hugging Face Chat Example
 
 This example shows how to use the [Vercel AI SDK](https://sdk.vercel.ai/docs) with [Next.js](https://nextjs.org/) and the [Hugging Face Inference](https://huggingface.co) to create a ChatGPT-like AI-powered streaming chat bot with [Open Assistant's SFT-4 12B](https://huggingface.co/OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5) as the chat model.
 
@@ -50,3 +50,4 @@ To learn more about Hugging Face, Next.js, and the Vercel AI SDK take a look at 
 - [Open-Assistant SFT-4 12B Model](https://huggingface.co/OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5) - learn about the AI model in use
 - [Open Assistant Project](https://open-assistant.io/) - learn about the Open Assistant project
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+](https://docs.google.com/document/d/1yODlVpeSp1DuJOywwsjoNKUbCpQ9k4ZzTYK1wQuTA0w/edit#heading=h.667dcbep7jzb)https://docs.google.com/document/d/1yODlVpeSp1DuJOywwsjoNKUbCpQ9k4ZzTYK1wQuTA0w/edit#heading=h.667dcbep7jzb
