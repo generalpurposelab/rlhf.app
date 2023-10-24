@@ -8,7 +8,7 @@ import Image from "next/image"
 
 
 export const metadata: Metadata = {
-  title: "Finetune LLMs in low resource languages",
+  title: "RLHF.app - Info",
   description: "Finetune LLMs in low resource languages.",
 }
 
