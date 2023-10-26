@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button"
 import { ChatBubbleIcon, DashboardIcon, FontRomanIcon, GearIcon, InfoCircledIcon, MagicWandIcon, MagnifyingGlassIcon, PersonIcon, StarIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import Image from 'next/image'
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+  } from "@/components/ui/tooltip"
+
   
 export function Sidebar({ highlightIcon = "Dashboard", highlightVariant = "ghost" }: SidebarProps) {
 
@@ -26,15 +33,32 @@ export function Sidebar({ highlightIcon = "Dashboard", highlightVariant = "ghost
               />
             </Link>
             </Flex>
+
             <Flex gap="3" direction="column">
-          
+
+            {/*  <TooltipProvider>
+            <Tooltip>
+                <TooltipTrigger>
                 <Link href="/demonstration">
                 <Button variant={getVariant("Demonstration")} size="icon">
                     <FontRomanIcon/>
                 </Button>
                 </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                <p>Prompts</p>
+                </TooltipContent>
+            </Tooltip>
+            </TooltipProvider> */}
+
+          
+                <Link href="/prompts">
+                <Button variant={getVariant("Demonstration")} size="icon">
+                    <FontRomanIcon/>
+                </Button>
+                </Link>
                 
-                <Link href="/comparison">
+                <Link href="/completions">
                 <Button variant={getVariant("Comparison")} size="icon">
                     <DashboardIcon/>
                 </Button>

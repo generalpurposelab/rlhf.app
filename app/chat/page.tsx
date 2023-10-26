@@ -1,34 +1,24 @@
-'use client';
-
-import { useChat } from 'ai/react';
+// app/app/page.tsx
 import { Sidebar } from "@/components/sidebar"
+import { Metadata } from "next"
+import { Box} from '@radix-ui/themes';
+import DataTable from './DataTable'
 
-export default function Chat() {
-  const { messages, input, handleInputChange, handleSubmit } = useChat();
+export const metadata: Metadata = {
+  title: "RLHF.app - Demonstration",
+  description: "Finetune LLMs in low resource languages.",
+}
 
+export default async function HomePage() {
+ 
   return (
-    <>
-    <Sidebar className="sidebar" highlightIcon="Chat" highlightVariant="outline"/>
-    
-    <div className="flex flex-col w-full max-w-md py-24 mx-auto stretch">
-      {messages.length > 0
-        ? messages.map(m => (
-            <div key={m.id} className="whitespace-pre-wrap">
-              {m.role === 'user' ? 'User: ' : 'AI: '}
-              {m.content}
-            </div>
-          ))
-        : null}
+    <div className='bg-white' style={{ display: 'flex', flexDirection: 'row', height: '100%', width: '100%' }}>
+  <Sidebar className="sidebar" highlightIcon="Chat" highlightVariant="outline"/>
+  <Box grow="1" p="3">
+    <DataTable/>
+  </Box>
+  
+      </div>
 
-      <form onSubmit={handleSubmit}>
-        <input
-          className="fixed bottom-0 w-full max-w-md p-2 mb-8 border border-gray-300 rounded shadow-xl"
-          value={input}
-          placeholder="Say something..."
-          onChange={handleInputChange}
-        />
-      </form>
-    </div>
-    </>
-  );
+  )
 }

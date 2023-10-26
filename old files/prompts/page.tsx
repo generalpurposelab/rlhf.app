@@ -13,7 +13,7 @@ export default async function HomePage() {
  
   return (
     <div className='bg-white' style={{ display: 'flex', flexDirection: 'row', height: '100%', width: '100%' }}>
-  <Sidebar className="sidebar" highlightIcon="Evaluation" highlightVariant="outline"/>
+  <Sidebar className="sidebar" highlightIcon="Demonstration" highlightVariant="outline"/>
   <Box grow="1" p="3">
     <DataTable/>
   </Box>

@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from 'react';
 import wikiqa from './wikiqa.json';
 import squad from './squad.json';
-import { csv } from 'd3';
 import { Input } from "@/components/ui/input"
 import { Flex, Heading, Separator, Table, Code, Text } from '@radix-ui/themes';
 import { Switch } from "@/components/ui/switch"
@@ -17,15 +16,32 @@ import {
 } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
 import { useCompletion } from 'ai/react';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
+import Link from 'next/link';
 
 export default function DataTable() {
+  
   const [data, setData] = useState([]);
   const [selectedDataset, setSelectedDataset] = useState("wikiqa");
   const [language, setLanguage] = useState("");
   const [selectedSize, setSelectedSize] = useState(10);
-  
   const [completions, setCompletions] = useState({});
   const currentIndex = useRef(0);
+  const [checkedCount, setCheckedCount] = useState(0);
+  const handleSwitchChange = (checked) => {
+    setCheckedCount(prevCount => checked ? prevCount + 1 : prevCount - 1);
+  }
+  const [open, setOpen] = useState(false);
 
   const {
     complete,
@@ -77,6 +93,12 @@ export default function DataTable() {
     }
   }, [selectedDataset]);
 
+  useEffect(() => {
+    if (checkedCount === selectedSize) {
+      setOpen(true);
+    }
+  }, [checkedCount, selectedSize]);
+
 
 
   return (
@@ -84,7 +106,28 @@ export default function DataTable() {
           <form onSubmit={handleSubmit}>
 
     <Flex direction="row" justify="between" grow="1">
-    <Heading>Prompts</Heading>
+    <Heading>Translate prompts</Heading>
+    <AlertDialog open={open} onOpenChange={setOpen}>
+  
+  <AlertDialogContent>
+    <AlertDialogHeader>
+      <AlertDialogTitle>Demonstrations complete</AlertDialogTitle>
+      <AlertDialogDescription>
+        Download your data or click continue to port your data through to the next stage. Cancel closes this window.
+      </AlertDialogDescription>
+    </AlertDialogHeader>
+    <AlertDialogFooter>
+      <AlertDialogCancel>Cancel</AlertDialogCancel>
+      <AlertDialogAction onClick={handleDownload}>Download data</AlertDialogAction>
+      <AlertDialogAction>
+      <Link href="/comparison">
+        Continue
+        </Link>
+        </AlertDialogAction>
+    </AlertDialogFooter>
+  </AlertDialogContent>
+</AlertDialog>
+
     <Flex gap="3">
 
     <Select onValueChange={value => setLanguage(value)}>
@@ -147,8 +190,8 @@ export default function DataTable() {
   <Table.Header>
     <Table.Row>
       <Table.ColumnHeaderCell width={1}>No.</Table.ColumnHeaderCell>
-      <Table.ColumnHeaderCell>Prompt (English)</Table.ColumnHeaderCell>
-      <Table.ColumnHeaderCell>Translation</Table.ColumnHeaderCell>
+      <Table.ColumnHeaderCell width="50%">Prompt (English)</Table.ColumnHeaderCell>
+      <Table.ColumnHeaderCell width="50%">Translation</Table.ColumnHeaderCell>
       <Table.ColumnHeaderCell width={1} justify="center">Confirmed</Table.ColumnHeaderCell>
     </Table.Row>
   </Table.Header>
@@ -165,7 +208,7 @@ export default function DataTable() {
                   onChange={e => handleInputChange2(e, row.Prompt)}
                 />
               </Table.Cell>
-              <Table.Cell justify="center"><Switch /></Table.Cell>
+              <Table.Cell justify="center"><Switch onCheckedChange={handleSwitchChange} /></Table.Cell>
             </Table.Row>
           ))}
         </Table.Body>
