@@ -158,7 +158,7 @@ export default function DataTable() {
   <SelectContent>
     <SelectItem value="10">10 samples</SelectItem>
     <SelectItem value="20">20 samples</SelectItem>
-    <SelectItem value="custom">Custom</SelectItem>
+    <SelectItem value="30">30 samples</SelectItem>
   </SelectContent>
 </Select>
 
@@ -175,7 +175,9 @@ export default function DataTable() {
     <SelectItem value="welsh">Welsh</SelectItem>
     <SelectItem value="yoruba">Yoruba</SelectItem>
     <SelectItem value="igala">Igala</SelectItem>
-    <SelectItem value="custom">Other</SelectItem>
+    <SelectItem value="afrikaans">Afrikaans</SelectItem>
+    <SelectItem value="zulu">Zulu</SelectItem>
+    <SelectItem value="xhosa">Xhosa</SelectItem>
   </SelectContent>
 </Select>
 
@@ -188,8 +190,6 @@ export default function DataTable() {
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="openai">gpt-3.5</SelectItem>
-          <SelectItem value="oss">oasst</SelectItem>
-        
         </SelectContent>
       </Select>
 
@@ -203,7 +203,6 @@ export default function DataTable() {
   <SelectContent>
     <SelectItem value="squad">SquAD</SelectItem>
     <SelectItem value="wikiqa">WikiQA</SelectItem>
-    <SelectItem value="custom">Add custom</SelectItem>
   </SelectContent>
 </Select>
 

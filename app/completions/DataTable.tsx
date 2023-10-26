@@ -161,7 +161,6 @@ function DataTable() {
           {
               model === 'openai' ? <RiOpenaiFill/> :
               model === 'llama' ? <BsMeta/> :
-              model === 'oss' ? <span role="img" aria-label="hugging face emoji">🤗</span> :
               <RocketIcon/>
             }
             <SelectValue placeholder="gpt-3.5" />
@@ -204,7 +203,7 @@ function DataTable() {
 <DropdownMenu>
 <DropdownMenuTrigger asChild>
   <Button variant={data.length > 0 ? "outline" : "default"}>
-    {(position === 'Test data' || position === 'Custom' || position === 'Local data') ? <Braces className="mr-2 h-4 w-4" /> : <Upload className="mr-2 h-4 w-4" />}
+    {(position === 'Test data' || position === 'Custom') ? <Braces className="mr-2 h-4 w-4" /> : <Upload className="mr-2 h-4 w-4" />}
     <span>{data.length > 0 ? position : "Load data"}</span>
   </Button>
 </DropdownMenuTrigger>
@@ -216,10 +215,7 @@ function DataTable() {
           <FlaskConical className="mr-2 h-4 w-4" />
             <span>Test data</span>
           </DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="Local data">
-          <Cpu className="mr-2 h-4 w-4" />
-            <span>Local data</span>
-          </DropdownMenuRadioItem>
+          
           <DropdownMenuRadioItem value="Custom" onSelect={() => fileInputRef.current?.click()}>
           <PlusCircle className="mr-2 h-4 w-4" />
             <span>Custom data</span>
