@@ -38,22 +38,20 @@ import { RiOpenaiFill } from 'react-icons/ri';
 import { BsMeta } from 'react-icons/bs';
 
 function DataTable() {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState<string>('');
   const [model, setModel] = useState('openai');
   const [isLoading, setIsLoading] = useState(false); 
   const [number, setNumber] = useState(3);
-  const [outputs, setOutputs] = useState({}); 
-  const [position, setPosition] = useState("Test data")
-  const fileInputRef = useRef(null);
-  const [data, setData] = useState([]);
+  const [outputs, setOutputs] = useState<{ [key: number]: { selected: boolean; result: string; } }[]>([]);  const [position, setPosition] = useState("Test data")
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [data, setData] = useState<{ question: string; answer: string; }[]>([]);
 
   useEffect(() => {
     setData(prompts);
   }, []);
   
   const [promptIndex, setPromptIndex] = useState(0);
-  const [selectedButton, setSelectedButton] = useState(null);
-
+  
   const handlePreviousPage = () => {
     if (promptIndex > 0) {
       setPromptIndex(promptIndex - 1);
@@ -66,19 +64,32 @@ function DataTable() {
     }
   };
 
-  const handleButtonClick = (index) => {
-    setOutputs(prevOutputs => ({ ...prevOutputs, [promptIndex]: { ...prevOutputs[promptIndex], selected: index } }));
+  const handleButtonClick = (index: number) => {
+    setOutputs(prevOutputs => ({ 
+      ...prevOutputs, 
+      [promptIndex]: { 
+        ...prevOutputs[promptIndex], 
+        [index]: { 
+          ...prevOutputs[promptIndex][index], 
+          selected: true,
+        } 
+      } 
+    }));
   };
 
+  interface Output {
+    prompt: string;
+    output: string;
+  }
+
   const downloadOutputs = () => {
-    const processedOutputs = Object.keys(outputs).reduce((acc, key) => {
-      const selectedOutput = outputs[key].selected;
-      if (selectedOutput !== null && selectedOutput !== undefined) {
-        acc[key] = {
-          prompt: data[key].question,
-          output: outputs[key][selectedOutput]
-        };
-      }
+    const processedOutputs = Object.keys(outputs).reduce<{ [key: string]: Output[] }>((acc, key) => {
+      acc[key] = Object.entries(outputs[Number(key)])
+        .filter(([_, output]) => output.selected)
+        .map(([index, output]) => ({
+          prompt: data[Number(key)].question,
+          output: output.result,
+        }));
       return acc;
     }, {});
   
@@ -93,9 +104,9 @@ function DataTable() {
 
   const fetchData = async () => {
     setIsLoading(true);
-    let results = [];
+    let results: string[] = [];
     const preprompt = "";
-  
+    
     if (model === 'openai') {
       results = await callOpenai(data, promptIndex, number, preprompt);
     } else if (model === 'oss') {
@@ -105,28 +116,34 @@ function DataTable() {
     } else if (model === 'mistral') {
       results = await callMistral(data, promptIndex, number, preprompt);
     }
-  
-    setOutputs(prevOutputs => ({ ...prevOutputs, [promptIndex]: results }));
+    
+    setOutputs(prevOutputs => ({ 
+      ...prevOutputs, 
+      [promptIndex]: results.map(result => ({ result, selected: false })) 
+    }));
     setIsLoading(false);
-  };
+  }
 
-  const handleTextAreaChange = (e, index) => {
+  const handleTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>, index: number) => {    
     const newOutputs = { ...outputs };
     if (newOutputs[promptIndex]) {
-      newOutputs[promptIndex][index] = e.target.value;
+      newOutputs[promptIndex][index] = {
+        ...newOutputs[promptIndex][index],
+        result: e.target.value
+      };
     }
     setOutputs(newOutputs);
   };
 
   return (
-    <div>
+    <>
       <Flex direction="row" justify="between" grow="1">
-    <Heading>Translate completions</Heading>
-    <Flex gap="3" >
+        <Heading>Translate completions</Heading>
+        <Flex gap="3" >
 
       <Select onValueChange={value => setNumber(parseInt(value, 10))}>
         <SelectTrigger className="w-[150px]">
-          <Flex justifyContent="flex-start" gap="3" align="center">
+          <Flex justify="start" gap="3" align="center">
           <RulerHorizontalIcon/>
             <SelectValue placeholder="3 samples" />
           </Flex>
@@ -140,7 +157,7 @@ function DataTable() {
 
       <Select onValueChange={value => setModel(value)}>
         <SelectTrigger className="w-[150px]">
-          <Flex justifyContent="flex-start" gap="3" align="center">
+          <Flex justify="start" gap="3" align="center">
           {
               model === 'openai' ? <RiOpenaiFill/> :
               model === 'llama' ? <BsMeta/> :
@@ -159,26 +176,30 @@ function DataTable() {
       </Select>
 
       <input 
-  ref={fileInputRef}
-  type="file" 
-  accept=".json" 
-  style={{ display: 'none' }}
-  onChange={(e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        try {
-          const json = JSON.parse(event.target.result);
-          setData(json);
-        } catch (error) {
-          console.error('Error parsing JSON', error);
-        }
-      };
-      reader.readAsText(file);
-    }
-  }} 
-/>
+          ref={fileInputRef}
+          type="file" 
+          accept=".json" 
+          style={{ display: 'none' }}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+            if (e.target.files) {
+              const file = e.target.files[0];
+              if (file) {
+                const reader = new FileReader();
+                reader.onload = (event) => {              
+                  try {
+                    if (event.target !== null && typeof event.target.result === 'string') {
+                      const json = JSON.parse(event.target.result);
+                      setData(json);
+                    }
+                  } catch (error) {
+                    console.error('Error parsing JSON', error);
+                  }
+                };
+                reader.readAsText(file);
+              }
+            }
+          }}
+        /> 
 
 <DropdownMenu>
 <DropdownMenuTrigger asChild>
@@ -199,7 +220,7 @@ function DataTable() {
           <Cpu className="mr-2 h-4 w-4" />
             <span>Local data</span>
           </DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="Custom" onSelect={() => fileInputRef.current.click()}>
+          <DropdownMenuRadioItem value="Custom" onSelect={() => fileInputRef.current?.click()}>
           <PlusCircle className="mr-2 h-4 w-4" />
             <span>Custom data</span>
           </DropdownMenuRadioItem>
@@ -244,18 +265,24 @@ function DataTable() {
           key={index} 
           size="2"
           style={{height: '100%', width: '100%'}}
-          value={outputs[promptIndex] ? outputs[promptIndex][index] || '' : ''} 
+          value={
+            outputs[promptIndex]
+              ? typeof outputs[promptIndex][index] === 'object'
+                ? outputs[promptIndex][index].result || ''
+                : String(outputs[promptIndex][index]) || ''
+              : ''
+          }   
           onClick={() => handleButtonClick(index)}
           onChange={(e) => handleTextAreaChange(e, index)}
         />
-        <Button 
-            variant={outputs[promptIndex] && outputs[promptIndex].selected === index ? "destructive" : "outline"} 
-            fullWidth 
-            onClick={() => handleButtonClick(index)}
-          >
-          {outputs[promptIndex] && outputs[promptIndex].selected === index ? <CheckIcon className="mr-2"/> : <CursorArrowIcon className="mr-2"/>}
-          Select
-        </Button>
+      <Button 
+          variant={outputs[promptIndex] && outputs[promptIndex][index] && outputs[promptIndex][index].selected ? "destructive" : "outline"} 
+          fullWidth 
+          onClick={() => handleButtonClick(index)}
+      >
+      {outputs[promptIndex] && outputs[promptIndex][index] && outputs[promptIndex][index].selected ? <CheckIcon className="mr-2"/> : <CursorArrowIcon className="mr-2"/>}
+      Select
+      </Button>
         </Flex>
       </>
     ))}
@@ -291,8 +318,8 @@ function DataTable() {
 </Button>
           </Flex>
         </Flex>
-    </div>
-  )
+   </>
+  );  
 }
 
 export default DataTable

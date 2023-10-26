@@ -41,29 +41,29 @@ import {
 
 export default function DataTable() {
   
-  const [data, setData] = useState([]);
-  const [selectedDataset, setSelectedDataset] = useState("wikiqa");
-  const [language, setLanguage] = useState("welsh");
-  const [selectedSize, setSelectedSize] = useState(10);
-  const [completions, setCompletions] = useState({});
-  const currentIndex = useRef(0);
-  const [promptIndex, setPromptIndex] = useState(0);
-  const [checkedCount, setCheckedCount] = useState(0);
-  const [isLoading, setIsLoading] = useState(false); 
-  const [model, setModel] = useState('openai');
-  const [currentPage, setCurrentPage] = useState(1);
+  const [data, setData] = useState<any[]>([]);
+  const [selectedDataset, setSelectedDataset] = useState<string>("wikiqa");
+  const [language, setLanguage] = useState<string>("welsh");
+  const [selectedSize, setSelectedSize] = useState<number>(10);
+  const [completions, setCompletions] = useState<Record<string, any>>({});
+  const [promptIndex, setPromptIndex] = useState<number>(0);
+  const [checkedCount, setCheckedCount] = useState<number>(0);
+  const [isLoading, setIsLoading] = useState<boolean>(false); 
+  const [model, setModel] = useState<string>('openai');
+  const [currentPage, setCurrentPage] = useState<number>(1);
   const itemsPerPage = 10;
 
-  const handleSwitchChange = (checked) => {
+  const handleSwitchChange = (checked: boolean) => {
     setCheckedCount(prevCount => checked ? prevCount + 1 : prevCount - 1);
   }
+
   const [open, setOpen] = useState(false);
 
   const fetchData = async () => {
     setIsLoading(true);
   
     for (let i = 0; i < selectedSize; i++) {
-      let results = [];
+      let results: string[] = [];
       const preprompt = `Translate the following into ${language}:`;
   
       if (model === 'openai') {
@@ -78,20 +78,22 @@ export default function DataTable() {
     setIsLoading(false);
   };
 
-  const handleInputChange2 = (e, prompt) => {
+  const handleInputChange2 = (e: React.ChangeEvent<HTMLInputElement>, prompt: string) => {
     const value = e.target.value;
     setCompletions(prev => ({ ...prev, [prompt]: value }));
   }
 
   const handleDownload = () => {
-    const dataStr = JSON.stringify(completions);
+    const dataArr = Object.values(completions).map(answer => ({ question: answer }));
+    const dataStr = JSON.stringify(dataArr);
     const dataBlob = new Blob([dataStr], { type: "application/json" });
     const url = URL.createObjectURL(dataBlob);
     const link = document.createElement('a');
-    link.download = 'completions.json';
+    link.download = 'prompts.json';
     link.href = url;
     link.click();
   };
+
   const handleNext = () => {
     setCurrentPage((prev) => Math.min(prev + 1, Math.ceil(selectedSize / itemsPerPage)));
   };
@@ -126,19 +128,20 @@ export default function DataTable() {
   
   <AlertDialogContent>
     <AlertDialogHeader>
-      <AlertDialogTitle>Demonstrations complete</AlertDialogTitle>
+      <AlertDialogTitle>Prompt translations complete</AlertDialogTitle>
       <AlertDialogDescription>
-        Download your data or click continue to port your data through to the next stage. Cancel closes this window.
+        Download your data below. Cancel closes this alert.
       </AlertDialogDescription>
     </AlertDialogHeader>
     <AlertDialogFooter>
       <AlertDialogCancel>Cancel</AlertDialogCancel>
       <AlertDialogAction onClick={handleDownload}>Download data</AlertDialogAction>
-      <AlertDialogAction>
+{/*       <AlertDialogAction>
       <Link href="/comparison">
         Continue
         </Link>
         </AlertDialogAction>
+        */}
     </AlertDialogFooter>
   </AlertDialogContent>
 </AlertDialog>
@@ -147,7 +150,7 @@ export default function DataTable() {
 
     <Select onValueChange={value => setSelectedSize(Number(value))}>
   <SelectTrigger className="w-[150px]">
-  <Flex justifyContent="flex-start" gap="3" align="center">
+  <Flex justify="start" gap="3" align="center">
     <RulerHorizontalIcon/>
     <SelectValue placeholder="10 samples" />
     </Flex>
@@ -162,7 +165,7 @@ export default function DataTable() {
 
     <Select onValueChange={value => setLanguage(value)}>
   <SelectTrigger className="w-[150px]">
-  <Flex justifyContent="flex-start" gap="3" align="center">
+  <Flex justify="start" gap="3" align="center">
     <GlobeIcon/>
     <SelectValue placeholder="Welsh" />
     </Flex>
@@ -178,7 +181,7 @@ export default function DataTable() {
 
 <Select onValueChange={value => setModel(value)}>
         <SelectTrigger className="w-[150px]">
-          <Flex justifyContent="flex-start" gap="3" align="center">
+          <Flex justify="start" gap="3" align="center">
             <RocketIcon/>
             <SelectValue placeholder="gpt-3.5" />
           </Flex>
@@ -192,7 +195,7 @@ export default function DataTable() {
 
 <Select onValueChange={value => setSelectedDataset(value)}>
   <SelectTrigger className="w-[140px]">
-  <Flex justifyContent="flex-start" gap="3" align="center">
+  <Flex justify="start" gap="3" align="center">
   <Braces className="mr-2 h-4 w-4" />
     <SelectValue placeholder="WikiQA"/>
     </Flex>
@@ -204,7 +207,7 @@ export default function DataTable() {
   </SelectContent>
 </Select>
 
-      <Button onClick={handleDownload} disabled={Object.keys(completions).length === 0} variant={Object.keys(completions).length === 0 ? "secondary" : ""}>
+<Button onClick={handleDownload} disabled={Object.keys(completions).length === 0} variant={Object.keys(completions).length === 0 ? "secondary" : "default"}>
   <DownloadIcon className="mr-2"/>Download
 </Button>
 

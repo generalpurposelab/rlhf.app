@@ -10,7 +10,12 @@ import {
     TooltipTrigger,
   } from "@/components/ui/tooltip"
 
-  
+  type SidebarProps = {
+    className?: string;
+    highlightIcon?: string;
+    highlightVariant?: "ghost" | "link" | "default" | "destructive" | "outline" | "secondary" | null | undefined;
+  };
+
 export function Sidebar({ highlightIcon = "Dashboard", highlightVariant = "ghost" }: SidebarProps) {
 
   const getVariant = (iconName: string) => {

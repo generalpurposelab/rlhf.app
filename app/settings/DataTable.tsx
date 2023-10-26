@@ -21,30 +21,7 @@ export default function DataTable() {
 
   <Text size="2">Add your API keys below.</Text>
   
-  <Grid columns="2" gap="3" width="auto">
-
-  <Box height="9">
-    <Text>OpenAI</Text>
-  </Box>
-  <Box height="9">
-  <Input placeholder='enter api key'></Input>
-  </Box>
-
-  <Box height="9">
-    <Text>Anthropic</Text>
-  </Box>
-  <Box height="9">
-    <Input placeholder='enter api key'></Input>
-  </Box>
-
-  <Box height="9">
-    <Text>Replicate</Text>
-  </Box>
-  <Box height="9">
-  <Input placeholder='enter api key'></Input>
-  </Box>
-
-</Grid>
+  
   
 
 
