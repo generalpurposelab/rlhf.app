@@ -6,7 +6,8 @@ import squad from './squad.json';
 import { Input } from "@/components/ui/input"
 import { Flex, Heading, Separator, Table, Code, Text } from '@radix-ui/themes';
 import { Switch } from "@/components/ui/switch"
-import { ChevronLeftIcon, ChevronRightIcon, DownloadIcon, RocketIcon, FileTextIcon, GlobeIcon, MagicWandIcon, PlusIcon, RulerHorizontalIcon } from '@radix-ui/react-icons'
+import { ChevronLeftIcon, ChevronRightIcon, DownloadIcon, RocketIcon, FileTextIcon, GlobeIcon, MagicWandIcon, PlusIcon, RulerHorizontalIcon, EyeClosedIcon, Cross1Icon } from '@radix-ui/react-icons'
+import { RiOpenaiFill } from 'react-icons/ri';
 import {
   Select,
   SelectContent,
@@ -37,21 +38,35 @@ import {
   PlusCircle,
   Upload,
   Loader2,
+  Database,
 } from "lucide-react"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export default function DataTable() {
   
   const [data, setData] = useState<any[]>([]);
   const [selectedDataset, setSelectedDataset] = useState<string>("wikiqa");
-  const [language, setLanguage] = useState<string>("welsh");
+  const [language, setLanguage] = useState<string>("Welsh");
   const [selectedSize, setSelectedSize] = useState<number>(10);
   const [completions, setCompletions] = useState<Record<string, any>>({});
   const [promptIndex, setPromptIndex] = useState<number>(0);
   const [checkedCount, setCheckedCount] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(false); 
-  const [model, setModel] = useState<string>('openai');
+  const [model, setModel] = useState<string>('gpt-3.5-turbo');
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const itemsPerPage = 10;
+  const [uploadedFileName, setUploadedFileName] = useState<string>("");
+  const [isCustomLanguage, setIsCustomLanguage] = useState<boolean>(false);
+  const buttonWidthClass = "w-56";
 
   const handleSwitchChange = (checked: boolean) => {
     setCheckedCount(prevCount => checked ? prevCount + 1 : prevCount - 1);
@@ -66,8 +81,8 @@ export default function DataTable() {
       let results: string[] = [];
       const preprompt = `Translate the following into ${language}:`;
   
-      if (model === 'openai') {
-        results = await callOpenai(data, i, 1, preprompt);
+      if (model === 'gpt-3.5-turbo' || model === 'gpt-4') {
+        results = await callOpenai(data, i, 1, preprompt, model);
       } else {
         results = await callOSS(data, i, 1, preprompt);
       }
@@ -148,8 +163,8 @@ export default function DataTable() {
 
     <Flex gap="3">
 
-    <Select onValueChange={value => setSelectedSize(Number(value))}>
-  <SelectTrigger className="w-[150px]">
+    <Select onValueChange={value => setSelectedSize(Number(value))} disabled={data.length === 0}>
+  <SelectTrigger className="w-36">
   <Flex justify="start" gap="3" align="center">
     <RulerHorizontalIcon/>
     <SelectValue placeholder="10 samples" />
@@ -159,52 +174,152 @@ export default function DataTable() {
     <SelectItem value="10">10 samples</SelectItem>
     <SelectItem value="20">20 samples</SelectItem>
     <SelectItem value="30">30 samples</SelectItem>
+    <SelectItem value={data.length.toString()}>All</SelectItem>
   </SelectContent>
 </Select>
 
 
-    <Select onValueChange={value => setLanguage(value)}>
-  <SelectTrigger className="w-[150px]">
-  <Flex justify="start" gap="3" align="center">
-    <GlobeIcon/>
-    <SelectValue placeholder="Welsh" />
-    </Flex>
-    
-  </SelectTrigger>
-  <SelectContent>
-    <SelectItem value="welsh">Welsh</SelectItem>
-    <SelectItem value="yoruba">Yoruba</SelectItem>
-    <SelectItem value="igala">Igala</SelectItem>
-    <SelectItem value="afrikaans">Afrikaans</SelectItem>
-    <SelectItem value="zulu">Zulu</SelectItem>
-    <SelectItem value="xhosa">Xhosa</SelectItem>
-  </SelectContent>
-</Select>
+   
+{isCustomLanguage ? (
+  <>
+  <Input 
+  className="w-44"  
+  placeholder="Add language" 
+    onChange={(e) => setLanguage(e.target.value)}
+  />
+<Button size="icon" variant="secondary" onClick={() => setIsCustomLanguage(false)}>
+  <Cross1Icon/>
+</Button>
+  </>
+) : (
+  <DropdownMenu>
+    <DropdownMenuTrigger asChild>
+      <Button variant="outline" className={buttonWidthClass} >
+        <GlobeIcon className="mr-2"/>
+        <span>{language}</span>
+      </Button>
+    </DropdownMenuTrigger>
+    <DropdownMenuContent className={buttonWidthClass} >
+      <DropdownMenuLabel className="text-center">Language</DropdownMenuLabel>
+      <DropdownMenuSeparator />
+      <DropdownMenuRadioGroup 
+        value={language} 
+        onValueChange={value => {
+          setLanguage(value);
+          if (value !== "Custom") {
+            setIsCustomLanguage(false);
+          }
+        }}
+      >
+        <DropdownMenuRadioItem value="Welsh">
+      <p className="mr-2">🏴󠁧󠁢󠁷󠁬󠁳󠁿</p>
+            <span>Welsh</span>
+      </DropdownMenuRadioItem>
+      <DropdownMenuRadioItem value="Yoruba">
+      <p className="mr-2">🇳🇬</p>
+            <span>Yoruba</span>
+      </DropdownMenuRadioItem>
+      <DropdownMenuRadioItem value="Igala">
+      <p className="mr-2">🇳🇬</p>
+            <span>Igala</span>
+      </DropdownMenuRadioItem>
+      <DropdownMenuRadioItem value="Afrikaans">
+      <p className="mr-2">🇿🇦</p>
+            <span>Afrikaans</span>
+      </DropdownMenuRadioItem>
+      <DropdownMenuRadioItem value="Zulu">
+      <p className="mr-2">🇿🇦</p>
+            <span>Zulu</span>
+      </DropdownMenuRadioItem>
+      <DropdownMenuRadioItem value="Xhosa">
+      <p className="mr-2">🇿🇦</p>
+            <span>Xhosa</span>
+      </DropdownMenuRadioItem>
+      <DropdownMenuSeparator />
+        <DropdownMenuRadioItem 
+          value="Custom"
+          onSelect={() => setIsCustomLanguage(true)}
+        >
+          <PlusCircle className="mr-2 h-4 w-4" />
+          <span>Custom</span>
+        </DropdownMenuRadioItem>
+      </DropdownMenuRadioGroup>
+    </DropdownMenuContent>
+  </DropdownMenu>
+)}
 
 <Select onValueChange={value => setModel(value)}>
-        <SelectTrigger className="w-[150px]">
+        <SelectTrigger className="w-36">
           <Flex justify="start" gap="3" align="center">
-            <RocketIcon/>
+          <RiOpenaiFill/>
             <SelectValue placeholder="gpt-3.5" />
           </Flex>
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="openai">gpt-3.5</SelectItem>
+          <SelectItem value="gpt-3.5-turbo">gpt-3.5</SelectItem>
+          <SelectItem value="gpt-4">gpt-4</SelectItem>
         </SelectContent>
       </Select>
 
-<Select onValueChange={value => setSelectedDataset(value)}>
-  <SelectTrigger className="w-[140px]">
-  <Flex justify="start" gap="3" align="center">
+
+      <DropdownMenu>
+<DropdownMenuTrigger asChild>
+  <Button variant="outline" className="w-36">
   <Braces className="mr-2 h-4 w-4" />
-    <SelectValue placeholder="WikiQA"/>
-    </Flex>
-  </SelectTrigger>
-  <SelectContent>
-    <SelectItem value="squad">SquAD</SelectItem>
-    <SelectItem value="wikiqa">WikiQA</SelectItem>
-  </SelectContent>
-</Select>
+    <span>{selectedDataset}</span>
+  </Button>
+</DropdownMenuTrigger>
+      <DropdownMenuContent className="w-36">
+        <DropdownMenuLabel className="text-center">Data source</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuRadioGroup value={selectedDataset} onValueChange={value => setSelectedDataset(value)}>
+        <DropdownMenuRadioItem value="wikiqa">
+          <Database className="mr-2 h-4 w-4" />
+            <span>WikiQA</span>
+          </DropdownMenuRadioItem>
+
+          <DropdownMenuRadioItem value="squad">
+          <Database className="mr-2 h-4 w-4" />
+            <span>SquAD</span>
+          </DropdownMenuRadioItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuRadioItem 
+            value="Custom"
+            onSelect={() => fileInputRef.current?.click()}
+          >
+            <PlusCircle className="mr-2 h-4 w-4" />
+            <span>Custom</span>
+          </DropdownMenuRadioItem>
+        </DropdownMenuRadioGroup>
+      </DropdownMenuContent>
+    </DropdownMenu>
+
+    <input 
+          ref={fileInputRef}
+          type="file" 
+          accept=".json" 
+          style={{ display: 'none' }}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+            if (e.target.files) {
+              const file = e.target.files[0];
+              if (file) {
+                setUploadedFileName(file.name); // Set the uploaded file name
+                const reader = new FileReader();
+                reader.onload = (event) => {              
+                  try {
+                    if (event.target !== null && typeof event.target.result === 'string') {
+                      const json = JSON.parse(event.target.result);
+                      setData(json);
+                    }
+                  } catch (error) {
+                    console.error('Error parsing JSON', error);
+                  }
+                };
+                reader.readAsText(file);
+              }
+            }
+          }}
+        /> 
 
 <Button onClick={handleDownload} disabled={Object.keys(completions).length === 0} variant={Object.keys(completions).length === 0 ? "secondary" : "default"}>
   <DownloadIcon className="mr-2"/>Download

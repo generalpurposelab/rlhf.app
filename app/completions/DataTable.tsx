@@ -39,7 +39,7 @@ import { BsMeta } from 'react-icons/bs';
 
 function DataTable() {
   const [input, setInput] = useState<string>('');
-  const [model, setModel] = useState('openai');
+  const [model, setModel] = useState('gpt-3.5-turbo');
   const [isLoading, setIsLoading] = useState(false); 
   const [number, setNumber] = useState(3);
   const [outputs, setOutputs] = useState<{ [key: number]: { selected: boolean; result: string; } }[]>([]);  const [position, setPosition] = useState("Test data")
@@ -107,8 +107,8 @@ function DataTable() {
     let results: string[] = [];
     const preprompt = "";
     
-    if (model === 'openai') {
-      results = await callOpenai(data, promptIndex, number, preprompt);
+    if (model === 'gpt-3.5-turbo' || model === 'gpt-4') {
+      results = await callOpenai(data, promptIndex, number, preprompt, model);
     } else if (model === 'oss') {
       results = await callOSS(data, promptIndex, number, preprompt);
     } else if (model === 'llama') {
@@ -159,7 +159,7 @@ function DataTable() {
         <SelectTrigger className="w-[150px]">
           <Flex justify="start" gap="3" align="center">
           {
-              model === 'openai' ? <RiOpenaiFill/> :
+              (model === 'gpt-3.5-turbo' || model === 'gpt-4') ? <RiOpenaiFill/> :
               model === 'llama' ? <BsMeta/> :
               <RocketIcon/>
             }
@@ -167,8 +167,8 @@ function DataTable() {
           </Flex>
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="openai">gpt-3.5</SelectItem>
-          <SelectItem value="oss">oasst</SelectItem>
+          <SelectItem value="gpt-3.5-turbo">gpt-3.5</SelectItem>
+          <SelectItem value="gpt-4">gpt-4</SelectItem>
           <SelectItem value="llama">llama</SelectItem>
           <SelectItem value="mistral">mistral</SelectItem>
         </SelectContent>
