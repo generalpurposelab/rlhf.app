@@ -2,11 +2,10 @@
 // app/demonstration/DatasetTable.tsx
 import { useState, useEffect, useRef } from 'react';
 import wikiqa from './wikiqa.json';
-import squad from './squad.json';
 import { Input } from "@/components/ui/input"
-import { Flex, Heading, Separator, Table, Code, Text } from '@radix-ui/themes';
+import { Flex, Heading, Separator, Table, Code, Text, Kbd, Em, Link } from '@radix-ui/themes';
 import { Switch } from "@/components/ui/switch"
-import { ChevronLeftIcon, ChevronRightIcon, DownloadIcon, RocketIcon, FileTextIcon, GlobeIcon, MagicWandIcon, PlusIcon, RulerHorizontalIcon, EyeClosedIcon, Cross1Icon } from '@radix-ui/react-icons'
+import { ChevronLeftIcon, ChevronRightIcon, DownloadIcon, RocketIcon, FileTextIcon, GlobeIcon, MagicWandIcon, PlusIcon, RulerHorizontalIcon, EyeClosedIcon, Cross1Icon, ChevronDownIcon, QuestionMarkCircledIcon, DashboardIcon } from '@radix-ui/react-icons'
 import { RiOpenaiFill } from 'react-icons/ri';
 import {
   Select,
@@ -28,7 +27,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
-import Link from 'next/link';
 import { callOSS, callOpenai } from "@/lib/llms"
 import {
   Braces,
@@ -49,13 +47,15 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { useToast } from "@/components/ui/use-toast"
+import { ToastAction } from "@/components/ui/toast"
 
 export default function DataTable() {
   
   const [data, setData] = useState<any[]>([]);
-  const [selectedDataset, setSelectedDataset] = useState<string>("wikiqa");
-  const [language, setLanguage] = useState<string>("Welsh");
-  const [selectedSize, setSelectedSize] = useState<number>(10);
+  const [selectedDataset, setSelectedDataset] = useState<string>("Test data");
+  const [language, setLanguage] = useState<string>("Yoruba");
+  const [selectedSize, setSelectedSize] = useState<number>();
   const [completions, setCompletions] = useState<Record<string, any>>({});
   const [promptIndex, setPromptIndex] = useState<number>(0);
   const [checkedCount, setCheckedCount] = useState<number>(0);
@@ -66,28 +66,42 @@ export default function DataTable() {
   const itemsPerPage = 10;
   const [uploadedFileName, setUploadedFileName] = useState<string>("");
   const [isCustomLanguage, setIsCustomLanguage] = useState<boolean>(false);
-  const buttonWidthClass = "w-56";
+  const buttonWidthClass = "w-[14rem]";
+  const [currentCount, setCurrentCount] = useState<number>(0);
+  const { toast } = useToast()
 
   const handleSwitchChange = (checked: boolean) => {
     setCheckedCount(prevCount => checked ? prevCount + 1 : prevCount - 1);
   }
 
   const [open, setOpen] = useState(false);
+  
 
   const fetchData = async () => {
     setIsLoading(true);
   
-    for (let i = 0; i < selectedSize; i++) {
-      let results: string[] = [];
-      const preprompt = `Translate the following into ${language}:`;
+    const size = selectedSize ?? 0;
   
-      if (model === 'gpt-3.5-turbo' || model === 'gpt-4') {
-        results = await callOpenai(data, i, 1, preprompt, model);
-      } else {
-        results = await callOSS(data, i, 1, preprompt);
+    for (let i = 0; i < size; i++) {
+      try {
+        let results: string[] = [];
+        const preprompt = `Translate the following into ${language}:`;
+  
+        if (model === 'gpt-3.5-turbo' || model === 'gpt-4') {
+          results = await callOpenai(data, i, 1, preprompt, model);
+        } else {
+          results = await callOSS(data, i, 1, preprompt);
+        }
+  
+        setCompletions(prev => ({ ...prev, [data[i].question]: results[0] }));
+        setCurrentCount(i + 1); 
+      } catch (error) {
+        toast({
+          variant: "destructive",
+          title: "Uh oh! Something went wrong.",
+          description: "There was a problem with your request.",
+        });
       }
-  
-      setCompletions(prev => ({ ...prev, [data[i].question]: results[0] }));
     }
   
     setIsLoading(false);
@@ -110,7 +124,7 @@ export default function DataTable() {
   };
 
   const handleNext = () => {
-    setCurrentPage((prev) => Math.min(prev + 1, Math.ceil(selectedSize / itemsPerPage)));
+    setCurrentPage((prev) => Math.min(prev + 1, Math.ceil(selectedSize ? selectedSize / itemsPerPage : 0)));
   };
 
   const handleBack = () => {
@@ -118,12 +132,11 @@ export default function DataTable() {
   };
 
   useEffect(() => {
-    if (selectedDataset === 'wikiqa') {
+    if (selectedDataset === 'Test data') {
       setData(wikiqa);
-    } else if (selectedDataset === 'squad') {
-      setData(squad);
     }
-  }, [selectedDataset]);
+    setSelectedSize(data.length);
+  }, [selectedDataset, data]);
 
   useEffect(() => {
     if (checkedCount === selectedSize) {
@@ -137,67 +150,108 @@ export default function DataTable() {
     <>
      
 
-    <Flex direction="row" justify="between" grow="1">
-    <Heading>Translate prompts</Heading>
-    <AlertDialog open={open} onOpenChange={setOpen}>
-  
+    <Flex direction="row" justify="between" grow="1" align="center">
+    <div className="flex">
+  <Heading>Translate prompts</Heading>
+{/* 
+  <Button
+      variant="outline"
+      onClick={() => {
+        toast({
+          variant: "destructive",
+          title: "Uh oh! Something went wrong.",
+          description: "There was a problem with your request. Try again.",
+        })
+      }}
+    >
+      Show Toast
+    </Button>
+    */}
+
+
+  <AlertDialog>
+  <AlertDialogTrigger>
+    <Button size="icon" variant="ghost" className='pb-1'>
+      <QuestionMarkCircledIcon className="ml-2 h-4 w-4"/>
+    </Button>
+    
+  </AlertDialogTrigger>
   <AlertDialogContent>
     <AlertDialogHeader>
-      <AlertDialogTitle>Prompt translations complete</AlertDialogTitle>
+      <AlertDialogTitle style={{ marginBottom: '10px' }}>How to translate prompts</AlertDialogTitle>
       <AlertDialogDescription>
-        Download your data below. Cancel closes this alert.
+      <Text style={{ color: 'black' }}>
+  <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
+  <li style={{ marginBottom: '10px' }}>Click the <Kbd style={{ backgroundColor: '#f2f2f2', borderRadius: '5px' }}><Database className="mr-1 h-2 w-2" /> Dataset</Kbd> dropdown button to select the dataset you want to use.</li>
+    <li style={{ marginBottom: '10px' }}>You can either upload your own dataset (which should be in <Link weight="medium" underline="always" href="https://github.com/generalpurposelab/rlhf.app/blob/main/app/prompts/wikiqa.json">this format</Link>), or choose the <Em>Test data</Em> dataset, which is taken from <Link weight="medium" underline="always" href="https://www.microsoft.com/en-us/download/details.aspx?id=52419">WikiQA</Link>.</li>
+    <li style={{ marginBottom: '10px' }}>Click the <Kbd style={{ backgroundColor: '#f2f2f2', borderRadius: '5px' }}><GlobeIcon className="mr-1 h-2 w-2"/> Select language</Kbd>dropdown button to select the language you want to translate the prompt dataset to.</li>
+    <li style={{ marginBottom: '10px' }}>Click the <Kbd style={{ backgroundColor: '#f2f2f2', borderRadius: '5px' }}>Generate</Kbd> button in the bottom right hand corner to generate translations.</li>
+    <li style={{ marginBottom: '10px' }}>Edit the translations until they are correct.</li>
+    <li style={{ marginBottom: '10px' }}>Once you are happy with the translations, you can click <Kbd style={{ backgroundColor: '#f2f2f2', borderRadius: '5px' }}>Download</Kbd> to download them locally, or click the <Kbd style={{ backgroundColor: '#f2f2f2', borderRadius: '5px' }}><DashboardIcon className="mr-1 h-2 w-2"/>Translate completions</Kbd> button in the left sidebar to continue.</li>
+  </ul>
+</Text>
       </AlertDialogDescription>
     </AlertDialogHeader>
     <AlertDialogFooter>
-      <AlertDialogCancel>Cancel</AlertDialogCancel>
-      <AlertDialogAction onClick={handleDownload}>Download data</AlertDialogAction>
-{/*       <AlertDialogAction>
-      <Link href="/comparison">
-        Continue
-        </Link>
-        </AlertDialogAction>
-        */}
+      <AlertDialogCancel>Close</AlertDialogCancel>
     </AlertDialogFooter>
   </AlertDialogContent>
 </AlertDialog>
+  
+</div>
+
+
+
 
     <Flex gap="3">
-
-    <Select onValueChange={value => setSelectedSize(Number(value))} disabled={data.length === 0}>
+<div className='hidden lg:block sm:hidden'>
+<Select onValueChange={value => {
+  setSelectedSize(value === "All" ? data.length : Number(value));
+  setCurrentPage(1);
+}} disabled={data.length === 0}>
   <SelectTrigger className="w-36">
-  <Flex justify="start" gap="3" align="center">
-    <RulerHorizontalIcon/>
-    <SelectValue placeholder="10 samples" />
+    <Flex justify="start" gap="3" align="center">
+      <RulerHorizontalIcon/>
+      <SelectValue placeholder="All" />
     </Flex>
   </SelectTrigger>
   <SelectContent>
     <SelectItem value="10">10 samples</SelectItem>
     <SelectItem value="20">20 samples</SelectItem>
     <SelectItem value="30">30 samples</SelectItem>
-    <SelectItem value={data.length.toString()}>All</SelectItem>
+    <SelectItem value="All">All</SelectItem>
   </SelectContent>
 </Select>
+</div>
 
 
-   
+<div className='hidden lg:block sm:hidden'>
+
 {isCustomLanguage ? (
   <>
+<Flex gap="3" style={{width: '14rem'}}>
   <Input 
-  className="w-44"  
-  placeholder="Add language" 
+    style={{flex: 1}}  
+    placeholder="Add language" 
     onChange={(e) => setLanguage(e.target.value)}
   />
-<Button size="icon" variant="secondary" onClick={() => setIsCustomLanguage(false)}>
-  <Cross1Icon/>
-</Button>
+  <Button size="icon" variant="secondary" onClick={() => setIsCustomLanguage(false)}>
+    <Cross1Icon/>
+  </Button>
+</Flex>
   </>
 ) : (
   <DropdownMenu>
     <DropdownMenuTrigger asChild>
-      <Button variant="outline" className={buttonWidthClass} >
-        <GlobeIcon className="mr-2"/>
-        <span>{language}</span>
-      </Button>
+    <Button variant="outline" className={buttonWidthClass}>
+  <Flex justify="between" align="center" grow="1">
+    <Flex align="center">
+      <GlobeIcon className="mr-2"/>
+      <span>Select language</span>
+    </Flex>
+    <ChevronDownIcon/>
+  </Flex>
+</Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent className={buttonWidthClass} >
       <DropdownMenuLabel className="text-center">Language</DropdownMenuLabel>
@@ -247,7 +301,8 @@ export default function DataTable() {
     </DropdownMenuContent>
   </DropdownMenu>
 )}
-
+</div>
+{/* 
 <Select onValueChange={value => setModel(value)}>
         <SelectTrigger className="w-36">
           <Flex justify="start" gap="3" align="center">
@@ -260,37 +315,55 @@ export default function DataTable() {
           <SelectItem value="gpt-4">gpt-4</SelectItem>
         </SelectContent>
       </Select>
+      */}
 
 
       <DropdownMenu>
 <DropdownMenuTrigger asChild>
   <Button variant="outline" className="w-36">
-  <Braces className="mr-2 h-4 w-4" />
-    <span>{selectedDataset}</span>
+
+  <Flex justify="between" align="center" grow="1">
+    <Flex align="center">
+    <Database className="mr-2 h-4 w-4" />
+    <span>Dataset</span>
+
+    </Flex>
+    <ChevronDownIcon/>
+  </Flex>
+
   </Button>
 </DropdownMenuTrigger>
       <DropdownMenuContent className="w-36">
         <DropdownMenuLabel className="text-center">Data source</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuRadioGroup value={selectedDataset} onValueChange={value => setSelectedDataset(value)}>
-        <DropdownMenuRadioItem value="wikiqa">
-          <Database className="mr-2 h-4 w-4" />
-            <span>WikiQA</span>
-          </DropdownMenuRadioItem>
 
-          <DropdownMenuRadioItem value="squad">
-          <Database className="mr-2 h-4 w-4" />
-            <span>SquAD</span>
-          </DropdownMenuRadioItem>
-          <DropdownMenuSeparator />
-          <DropdownMenuRadioItem 
-            value="Custom"
-            onSelect={() => fileInputRef.current?.click()}
-          >
-            <PlusCircle className="mr-2 h-4 w-4" />
-            <span>Custom</span>
-          </DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
+<DropdownMenuRadioGroup value={selectedDataset} onValueChange={value => {
+    setCurrentPage(1);
+    setSelectedDataset(value);
+
+}}>
+  <DropdownMenuRadioItem value="Test data">
+    <Database className="mr-2 h-4 w-4" />
+    <span>Test data</span>
+  </DropdownMenuRadioItem>
+  {/* 
+  <DropdownMenuRadioItem value="squad">
+    <Database className="mr-2 h-4 w-4" />
+    <span>SquAD</span>
+  </DropdownMenuRadioItem>
+  */}
+  <DropdownMenuSeparator />
+  <DropdownMenuRadioItem 
+    value="Custom"
+    onSelect={() => {
+      setCurrentPage(1);
+      fileInputRef.current?.click();
+    }}
+  >
+    <PlusCircle className="mr-2 h-4 w-4" />
+    <span>Upload</span>
+  </DropdownMenuRadioItem>
+</DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
 
@@ -329,14 +402,13 @@ export default function DataTable() {
   </Flex>
   
   <Separator my="3" size="4" />
-  
-  <Table.Root variant="surface" >
-  <Table.Header>
+  <Flex grow="1">
+  <Table.Root variant="surface" style={{ width: '100%' }}>  <Table.Header>
     <Table.Row>
       <Table.ColumnHeaderCell width={1}>No.</Table.ColumnHeaderCell>
       <Table.ColumnHeaderCell width="50%">Prompt (English)</Table.ColumnHeaderCell>
       <Table.ColumnHeaderCell width="50%">Translation</Table.ColumnHeaderCell>
-      <Table.ColumnHeaderCell width={1} justify="center">Confirmed</Table.ColumnHeaderCell>
+      {/* <Table.ColumnHeaderCell width={1} justify="center">Confirmed</Table.ColumnHeaderCell> */}
     </Table.Row>
   </Table.Header>
   
@@ -348,40 +420,46 @@ export default function DataTable() {
             .map((row, index) => (
             <Table.Row key={index}>
               <Table.RowHeaderCell><Code>{index + 1}</Code></Table.RowHeaderCell>
-              <Table.Cell><Code>{row.question}</Code></Table.Cell>
               <Table.Cell>
+  <Code style={{ textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>
+    {row.question}
+  </Code>
+</Table.Cell>              <Table.Cell>
               <Input 
                   value={completions[row.question] || ' '}
                   onChange={e => handleInputChange2(e, row.question)}
                   className='h-8'
                 />
               </Table.Cell>
-              <Table.Cell justify="center"><Switch onCheckedChange={handleSwitchChange} /></Table.Cell>
+             {/* <Table.Cell justify="center"><Switch onCheckedChange={handleSwitchChange} /></Table.Cell> */}
             </Table.Row>
           ))}
         </Table.Body>
 
 </Table.Root>
+</Flex>
 
+<Flex direction="column" className="fixed inset-x-22 bottom-0 bg-white w-full pr-24 pb-3">
   <Separator my="3" size="4" />
 
   <Flex direction="row" justify="between" grow="1" align="center">
-  <Code>{`${currentPage}/${Math.ceil(selectedSize / itemsPerPage)}`}</Code> 
+
+  <Code>{`${currentPage}/${Math.ceil(selectedSize ? selectedSize / itemsPerPage : 0)}`}</Code>
     <Flex gap="3" align="center">
     Back
           <Button variant="secondary" size="icon" onClick={handleBack} disabled={currentPage === 1}>
             <ChevronLeftIcon />
           </Button>
-          <Button variant="secondary" size="icon" onClick={handleNext} disabled={currentPage === Math.ceil(selectedSize / itemsPerPage)}>
-            <ChevronRightIcon />
-          </Button>
-          Next
+          <Button variant="secondary" size="icon" onClick={handleNext} disabled={currentPage === Math.ceil(selectedSize ? selectedSize / itemsPerPage : 0)}>
+  <ChevronRightIcon />
+</Button>
+Next
             
-      <Button onClick={fetchData} disabled={isLoading}>
+      <Button onClick={fetchData} disabled={isLoading} className='w-24'>
         {isLoading ? (
           <>
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-            Please wait
+            {`${currentCount}/${selectedSize}`}
           </>
         ) : (
           <>
@@ -391,8 +469,7 @@ export default function DataTable() {
       </Button>
     </Flex>
   </Flex>
-
-
+  </Flex>
 
 </>
 

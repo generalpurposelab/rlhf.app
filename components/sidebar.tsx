@@ -41,61 +41,97 @@ export function Sidebar({ highlightIcon = "Dashboard", highlightVariant = "ghost
 
             <Flex gap="3" direction="column">
 
-            {/*  <TooltipProvider>
-            <Tooltip>
-                <TooltipTrigger>
-                <Link href="/demonstration">
-                <Button variant={getVariant("Demonstration")} size="icon">
-                    <FontRomanIcon/>
-                </Button>
-                </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                <p>Prompts</p>
-                </TooltipContent>
-            </Tooltip>
-            </TooltipProvider> */}
+            <TooltipProvider>
+              <Tooltip>
+                  <TooltipTrigger>
+                      <Link href="/prompts">
+                          <Button variant={getVariant("Demonstration")} size="icon">
+                              <FontRomanIcon/>
+                          </Button>
+                      </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="right">
+                      <p>Translate prompts</p>
+                  </TooltipContent>
+              </Tooltip>
+          </TooltipProvider>
 
-          
-                <Link href="/prompts">
-                <Button variant={getVariant("Demonstration")} size="icon">
-                    <FontRomanIcon/>
-                </Button>
-                </Link>
-                
-                <Link href="/completions">
-                <Button variant={getVariant("Comparison")} size="icon">
-                    <DashboardIcon/>
-                </Button>
-                </Link>
-                
-                <Link href="/evaluation">
-                <Button variant={getVariant("Evaluation")} size="icon">
-                    <StarIcon/>
-                </Button>
-                </Link>
+          <TooltipProvider>
+              <Tooltip>
+                  <TooltipTrigger>
+                      <Link href="/completions">
+                          <Button variant={getVariant("Comparison")} size="icon">
+                              <DashboardIcon/>
+                          </Button>
+                      </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="right">
+                      <p>Translate completions</p>
+                  </TooltipContent>
+              </Tooltip>
+          </TooltipProvider>
 
-                <Link href="/chat">
-                <Button variant={getVariant("Chat")} size="icon">
-                    <ChatBubbleIcon/>
-                </Button>
-                </Link>
+          <TooltipProvider>
+              <Tooltip>
+                  <TooltipTrigger>
+                      
+                          <Button variant={getVariant("Evaluation")} size="icon" disabled>
+                              <StarIcon/>
+                          </Button>
+                 
+                  </TooltipTrigger>
+                  <TooltipContent side="right">
+                      <p>Evaluate outputs</p>
+                  </TooltipContent>
+              </Tooltip>
+          </TooltipProvider>
 
+  
+
+        
+
+                <TooltipProvider>
+              <Tooltip>
+                  <TooltipTrigger>
+                   
+                          <Button variant={getVariant("Chat")} size="icon" disabled>
+                          <ChatBubbleIcon/>
+                          </Button>
                 
+                  </TooltipTrigger>
+                  <TooltipContent side="right">
+                      <p>Test models</p>
+                  </TooltipContent>
+              </Tooltip>
+          </TooltipProvider>
+              
+
+
 
             </Flex>
-            <Flex gap="3" direction="column">
-            <Link href="/info">
-                <Button variant={getVariant("Info")} size="icon">
-                    <InfoCircledIcon/>
-                </Button>
-                </Link>
 
-                <Link href="/settings">
-                <Button variant={getVariant("Settings")} size="icon">
+            <Flex gap="3" direction="column">
+
+                <TooltipProvider>
+              <Tooltip>
+                  <TooltipTrigger>
+                      <Link href="/info">
+                          <Button variant={getVariant("Info")} size="icon">
+                              <InfoCircledIcon/>
+                          </Button>
+                      </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="right">
+                      <p>Instructions</p>
+                  </TooltipContent>
+              </Tooltip>
+          </TooltipProvider>
+
+           
+                <Button variant={getVariant("Settings")} size="icon" disabled>
                     <GearIcon/>
                 </Button>
-                </Link>
+              
             </Flex>
             </Flex>
        

@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
   // Redirect users to /prompts
-  redirect('/prompts')
+  redirect('/info')
 }
