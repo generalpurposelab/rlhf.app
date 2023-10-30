@@ -1,5 +1,8 @@
+// prompt/DataTable.tsx
+
+
 'use client'
-// app/demonstration/DatasetTable.tsx
+
 import { useState, useEffect, useRef } from 'react';
 import wikiqa from './wikiqa.json';
 import { Input } from "@/components/ui/input"
@@ -48,7 +51,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { useToast } from "@/components/ui/use-toast"
-import { ToastAction } from "@/components/ui/toast"
 
 export default function DataTable() {
   
@@ -99,7 +101,7 @@ export default function DataTable() {
         toast({
           variant: "destructive",
           title: "Uh oh! Something went wrong.",
-          description: "There was a problem with your request.",
+          description: "A question was skipped. You'll have to add it in manually.",
         });
       }
     }
@@ -153,6 +155,7 @@ export default function DataTable() {
     <Flex direction="row" justify="between" grow="1" align="center">
     <div className="flex">
   <Heading>Translate prompts</Heading>
+  <Text>insert context here</Text>
 {/* 
   <Button
       variant="outline"
@@ -172,7 +175,7 @@ export default function DataTable() {
   <AlertDialog>
   <AlertDialogTrigger>
     <Button size="icon" variant="ghost" className='pb-1'>
-      <QuestionMarkCircledIcon className="ml-2 h-4 w-4"/>
+      <QuestionMarkCircledIcon className="h-4 w-4"/>
     </Button>
     
   </AlertDialogTrigger>

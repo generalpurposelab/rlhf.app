@@ -70,8 +70,10 @@ function DataTable() {
   const { toast } = useToast()
 
   useEffect(() => {
-    setData(prompts);
-  }, []);
+    if (data.length === 0) {
+      setData(prompts);
+    }
+  }, [data]);
   
   const [promptIndex, setPromptIndex] = useState(0);
   
@@ -285,6 +287,10 @@ function DataTable() {
         <DropdownMenuLabel>Choose source</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
+        <DropdownMenuRadioItem value="System data"> {/* onSelect={() => setData(prompts)} */}
+          <Database className="mr-2 h-4 w-4" />
+            <span>System data</span>
+          </DropdownMenuRadioItem>
         <DropdownMenuRadioItem value="Test data" onSelect={() => setData(prompts)}>
           <FlaskConical className="mr-2 h-4 w-4" />
             <span>Test data</span>

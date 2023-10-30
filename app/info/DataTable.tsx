@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import { Flex, Heading, Separator, Text, Box, Kbd, Link, AspectRatio, Grid } from '@radix-ui/themes';
 import Image from 'next/image';
-import { Database } from 'lucide-react';
-import { DashboardIcon, GlobeIcon, RulerHorizontalIcon } from '@radix-ui/react-icons';
+import { Database, Download } from 'lucide-react';
+import { ChevronRightIcon, DashboardIcon, GlobeIcon, RulerHorizontalIcon } from '@radix-ui/react-icons';
 import styled from 'styled-components';
 
 const ResponsiveGrid = styled(Grid)`
@@ -37,7 +37,7 @@ export default function DataTable() {
     <li style={{ marginBottom: '5px' }}>Click the <Kbd ><GlobeIcon className="mr-1 h-2 w-2"/> Select language</Kbd> dropdown button to select the language you want to translate the prompt dataset to.</li>
     <li style={{ marginBottom: '5px' }}>Click the <Kbd >Generate</Kbd> button in the bottom right hand corner to generate translations.</li>
     <li style={{ marginBottom: '5px' }}>Edit the translations until they are correct.</li>
-    <li style={{ marginBottom: '5px' }}>Once you are happy with the translations, you can click <Kbd >Download</Kbd> to download them locally, or click the <Kbd ><DashboardIcon className="mr-1 h-2 w-2"/>Translate completions</Kbd> button in the left sidebar to continue.</li>
+    <li style={{ marginBottom: '5px' }}>Once you are happy with the translations, you can click <Kbd style={{ backgroundColor: 'black', color: 'white' }}><Download className="mr-1 h-2 w-2" style={{ color: 'white' }}/> Download</Kbd> to download them locally, or click the <Kbd ><DashboardIcon className="mr-1 h-2 w-2"/>Translate completions</Kbd> button in the left sidebar to continue.</li>
   </ul>
 </Text>
   </Box>
@@ -63,8 +63,8 @@ export default function DataTable() {
   <li style={{ marginBottom: '5px' }}>Click the <Kbd ><RulerHorizontalIcon className="mr-1 h-2 w-2" />samples</Kbd> dropdown at the top to choose how many samples you want to generate.</li>
     <li style={{ marginBottom: '5px' }}>Click the <Kbd >Generate</Kbd> button in the bottom right hand corner to generate translations.</li>
     <li style={{ marginBottom: '5px' }}>Choose the most accurate answer from the multiple answers provided, and then edit it so it is <b>truthful</b>, <b>harmless</b>, <b>culturally relevant</b>, and <b>helpful</b>. Hover over the badges on the right of the page to learn more.</li>
-    <li style={{ marginBottom: '5px' }}>Once you are happy with the answer, click <Kbd >Next</Kbd> to go to the next question and repeat these steps.</li>
-    <li style={{ marginBottom: '5px' }}>Once you have finished, click <Kbd >Download</Kbd> to download them locally.</li>
+    <li style={{ marginBottom: '5px' }}>Once you are happy with the answer, click <Kbd ><ChevronRightIcon className="mr-1 h-2 w-2" /> Next</Kbd> to go to the next question and repeat these steps.</li>
+    <li style={{ marginBottom: '5px' }}>Once you have finished, click <Kbd style={{ backgroundColor: 'black', color: 'white' }}><Download className="mr-1 h-2 w-2" style={{ color: 'white' }}/> Download</Kbd> to download them locally.</li>
   </ul>
 </Text>
 
