@@ -155,7 +155,7 @@ export default function DataTable() {
     <Flex direction="row" justify="between" grow="1" align="center">
     <div className="flex">
   <Heading>Translate prompts</Heading>
-  <Text>insert context here</Text>
+ 
 {/* 
   <Button
       variant="outline"
