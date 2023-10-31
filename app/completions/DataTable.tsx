@@ -156,7 +156,7 @@ function DataTable() {
       toast({
         variant: "destructive",
         title: "Uh oh! Something went wrong.",
-        description: "There was a problem with your request.",
+        description: "There was a problem with your request. Try again in a few seconds or skip to the next question and come back.",
       });
     } finally {
       setIsLoading(false);
