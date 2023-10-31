@@ -1,29 +1,3536 @@
 [
-  {"question": "What is the capital of France?"},
-  {"question": "Who wrote the novel \"Pride and Prejudice\"?"},
-  {"question": "What gas do plants absorb from the atmosphere for photosynthesis?"},
-  {"question": "How many bones are there in the human body?"},
-  {"question": "In which year did the Titanic sink?"},
-  {"question": "What is the chemical symbol for gold?"},
-  {"question": "Who painted the \"Mona Lisa\"?"},
-  {"question": "Where is the Great Barrier Reef located?"},
-  {"question": "Who is known as the \"Father of the Nation\" in India?"},
-  {"question": "What planet is known as the \"Red Planet\"?"},
-  {"question": "What is the largest ocean on Earth?"},
-  {"question": "Who discovered penicillin?"},
-  {"question": "What is the tallest mountain in the world?"},
-  {"question": "Who was the first person to walk on the moon?"},
-  {"question": "What is the longest river in the world?"},
-  {"question": "What is the speed of light?"},
-  {"question": "Who is the author of \"To Kill a Mockingbird\"?"},
-  {"question": "What is the distance between the Earth and the Sun?"},
-  {"question": "What is the largest country by land area?"},
-  {"question": "Who was the first President of the United States?"},
-  {"question": "What is the smallest planet in our solar system?"},
-  {"question": "What is the largest planet in our solar system?"},
-  {"question": "Who is the current Secretary-General of the United Nations?"},
-  {"question": "What is the capital of Australia?"},
-  {"question": "Who is the current Prime Minister of the United Kingdom?"},
-  {"question": "What is the national bird of the United States?"},
-  {"question": "What is the national dish of Italy?"}
+  {
+    "question": "what is an sd memory card reader"
+  },
+  {
+    "question": "what part of the government is the federal court judge in ?"
+  },
+  {
+    "question": "what glows in the dark"
+  },
+  {
+    "question": "How do LCD Monitors Work"
+  },
+  {
+    "question": "what date did the american civil war start"
+  },
+  {
+    "question": "what are the reasons for historical change"
+  },
+  {
+    "question": "Who holds records for most weeks spent at number one as female artist"
+  },
+  {
+    "question": "what is C\u00f4te d'Ivoire like ?"
+  },
+  {
+    "question": "what are two languages in Nigeria ?"
+  },
+  {
+    "question": "what is a mimio board"
+  },
+  {
+    "question": "what is firewire used for"
+  },
+  {
+    "question": "Who is the richest person in the world"
+  },
+  {
+    "question": "what is water jet propulsion"
+  },
+  {
+    "question": "What a Margarita contains"
+  },
+  {
+    "question": "what are some advantages that donald trump has had"
+  },
+  {
+    "question": "how many pawns in chess"
+  },
+  {
+    "question": "when do solar eclipses happen ?"
+  },
+  {
+    "question": "how old was arnold in terminator 3"
+  },
+  {
+    "question": "what is surname and given name"
+  },
+  {
+    "question": "Can you describe a traditional wedding ceremony?"
+  },
+  {
+    "question": "Who was Rosa Parks and what was her role in history?"
+  },
+  {
+    "question": "what is tofu made of"
+  },
+  {
+    "question": "what is a wheel well on trucks"
+  },
+  {
+    "question": "who shot john lennon ?"
+  },
+  {
+    "question": "what are the 7 continents"
+  },
+  {
+    "question": "what size engine does a chevrolet cavalier have"
+  },
+  {
+    "question": "where was All roads lead home filmed"
+  },
+  {
+    "question": "what is a mms message"
+  },
+  {
+    "question": "when was the first automobile"
+  },
+  {
+    "question": "what countries have won the world cup"
+  },
+  {
+    "question": "what is civil engineering aBOUT"
+  },
+  {
+    "question": "what is the most successful video game series"
+  },
+  {
+    "question": "what does coca cola do for nausea/vomiting"
+  },
+  {
+    "question": "how does nanotechnology affect health"
+  },
+  {
+    "question": "what is the system in field hockey"
+  },
+  {
+    "question": "where are facial sinuses"
+  },
+  {
+    "question": "How do volcanoes form and erupt?"
+  },
+  {
+    "question": "when flushed away came out on dvd"
+  },
+  {
+    "question": "what happened in the 90 's"
+  },
+  {
+    "question": "What is sealing contact ?"
+  },
+  {
+    "question": "how bad burns go to burn center"
+  },
+  {
+    "question": "how does sedimentary rock form"
+  },
+  {
+    "question": "where do goldfish live"
+  },
+  {
+    "question": "what does a migrant worker do"
+  },
+  {
+    "question": "what is the difference in meaning of fraud and illegal acts"
+  },
+  {
+    "question": "What is the Jerusalem Artichoke good for ?"
+  },
+  {
+    "question": "how much caffeine is in a shot of espresso"
+  },
+  {
+    "question": "What is codeine syrup ?"
+  },
+  {
+    "question": "how do you use a subjective complement"
+  },
+  {
+    "question": "when did the us stop producing vacuum tubes"
+  },
+  {
+    "question": "what ethnicity is bruno mars"
+  },
+  {
+    "question": "how the capital of brazil , brasilia was created"
+  },
+  {
+    "question": "what is the minimalist trend"
+  },
+  {
+    "question": "what is the lombardi trophy made of ?"
+  },
+  {
+    "question": "when to hunt red fox"
+  },
+  {
+    "question": "what does the professional designation master mean"
+  },
+  {
+    "question": "what latitude is tropic of cancer"
+  },
+  {
+    "question": "what are the elements in whole grain oats"
+  },
+  {
+    "question": "what is the highest mountain in Nigeria and where is is located ?"
+  },
+  {
+    "question": "what are the colors of a rainbow"
+  },
+  {
+    "question": "Explain the concept of genetic mutation."
+  },
+  {
+    "question": "What is the cultural background of blues"
+  },
+  {
+    "question": "What is the principle behind the working of a microwave oven?"
+  },
+  {
+    "question": "what year was superdome built"
+  },
+  {
+    "question": "how much does a gold bar weigh"
+  },
+  {
+    "question": "where is modem on WAN radio internet ?"
+  },
+  {
+    "question": "Can you describe the cultural significance of Nigerian music and Nollywood?"
+  },
+  {
+    "question": "what is an array in programming"
+  },
+  {
+    "question": "what type of game is heavy rain"
+  },
+  {
+    "question": "what is a good credit score"
+  },
+  {
+    "question": "what is a magnolias kingdom ?"
+  },
+  {
+    "question": "how many users do twitter have"
+  },
+  {
+    "question": "what is the jewish bible called"
+  },
+  {
+    "question": "what contributes to high blood pressure"
+  },
+  {
+    "question": "what is high sticking in hockey"
+  },
+  {
+    "question": "how does a cat purr"
+  },
+  {
+    "question": "when was the Declaration of Independence Signing"
+  },
+  {
+    "question": "who are the two senators of louisiana"
+  },
+  {
+    "question": "what do porcupines eat"
+  },
+  {
+    "question": "what is a millwright worker"
+  },
+  {
+    "question": "what songs are used in the sucker punch trailer"
+  },
+  {
+    "question": "what does xylem transport"
+  },
+  {
+    "question": "Describe the achievements of the ancient Egyptians."
+  },
+  {
+    "question": "when did coca cola first come out"
+  },
+  {
+    "question": "how deep is the atlantic ocean"
+  },
+  {
+    "question": "WHAT IS NON BINDING ?"
+  },
+  {
+    "question": "what is in a will"
+  },
+  {
+    "question": "what is an element on a periodic table"
+  },
+  {
+    "question": "what is hijackthis 1.99.1"
+  },
+  {
+    "question": "what is high emotional intelligence ?"
+  },
+  {
+    "question": "what is mincemeat made of"
+  },
+  {
+    "question": "where is the human thigh located ?"
+  },
+  {
+    "question": "What is a chemical bond?"
+  },
+  {
+    "question": "what is iron made of"
+  },
+  {
+    "question": "what is the kanji for language"
+  },
+  {
+    "question": "what is the ideal mean radiant temperature"
+  },
+  {
+    "question": "how does milk turn into different types of cheeses"
+  },
+  {
+    "question": "what is eggnog made of"
+  },
+  {
+    "question": "how many qfc stores are there"
+  },
+  {
+    "question": "what is an irregular heartbeat pvc"
+  },
+  {
+    "question": "how many presidents"
+  },
+  {
+    "question": "when was queen elizabeth ii married"
+  },
+  {
+    "question": "where were the Winter Olympics in 2006"
+  },
+  {
+    "question": "what can silk be used for"
+  },
+  {
+    "question": "What is the significance of masquerades in Nigerian culture?"
+  },
+  {
+    "question": "what is the lifespan of a down 's syndrome individual"
+  },
+  {
+    "question": "what is steam by valve corporation"
+  },
+  {
+    "question": "What is the binomial theorem?"
+  },
+  {
+    "question": "what was the name of the magazine all teenager read in 2000s"
+  },
+  {
+    "question": "what are the acronyms for masters degree"
+  },
+  {
+    "question": "what is a good leg press"
+  },
+  {
+    "question": "how many wives did henry the 8th have"
+  },
+  {
+    "question": "What are some Nigerian customs and traditions?"
+  },
+  {
+    "question": "what is education for a psychiatrist"
+  },
+  {
+    "question": "what is the age you have to be to have the right to freedom of speech"
+  },
+  {
+    "question": "what countries are very near to Haiti ?"
+  },
+  {
+    "question": "what is human skin made of"
+  },
+  {
+    "question": "what are the actual sizes of scale models"
+  },
+  {
+    "question": "what society is collectivist"
+  },
+  {
+    "question": "what is minimum wage"
+  },
+  {
+    "question": "what freezes faster ? hot or cold water ?"
+  },
+  {
+    "question": "what causes the seasons"
+  },
+  {
+    "question": "what is the mortality rate of sepsis"
+  },
+  {
+    "question": "what does a lion need"
+  },
+  {
+    "question": "what spanish speaking countries have the most world cup titles"
+  },
+  {
+    "question": "What is the concept of a derivative in calculus?"
+  },
+  {
+    "question": "How is Nigerian cuisine influenced by local ingredients?"
+  },
+  {
+    "question": "how many teams are in the world cup"
+  },
+  {
+    "question": "how do former volcanoes affect hydrothermal activity"
+  },
+  {
+    "question": "what is a wii motion remote"
+  },
+  {
+    "question": "What is the role of enzymes in the human body?"
+  },
+  {
+    "question": "what is a low pulse rate"
+  },
+  {
+    "question": "What are the effects of climate change on ocean currents?"
+  },
+  {
+    "question": "how many eggs per chicken is expected"
+  },
+  {
+    "question": "what is a discipline of study"
+  },
+  {
+    "question": "what are the rules of basketball"
+  },
+  {
+    "question": "what are the characteristics of bryophytes"
+  },
+  {
+    "question": "what does the green mean on the nigerian flag"
+  },
+  {
+    "question": "what countries were depended on USSR after 1945"
+  },
+  {
+    "question": "where is c-reactive protein made"
+  },
+  {
+    "question": "when was the constitution written"
+  },
+  {
+    "question": "What is the largest planet in our solar system?"
+  },
+  {
+    "question": "who made hubble telescope"
+  },
+  {
+    "question": "how do you know if something is the golden ratio"
+  },
+  {
+    "question": "what do jehovah witnesses believe"
+  },
+  {
+    "question": "What is the tallest mountain in the world?"
+  },
+  {
+    "question": "What are the different types of biomes?"
+  },
+  {
+    "question": "what is lifespan development in psychology"
+  },
+  {
+    "question": "What is a geometric progression?"
+  },
+  {
+    "question": "when can you use a defibulator"
+  },
+  {
+    "question": "where was the tsunami in 2005"
+  },
+  {
+    "question": "what day is the feast of st joseph 's ?"
+  },
+  {
+    "question": "what is a cervix childbirth"
+  },
+  {
+    "question": "where was skiing originated"
+  },
+  {
+    "question": "what is quasi judicial agency"
+  },
+  {
+    "question": "where is the seed located in an artichoke"
+  },
+  {
+    "question": "how big or small a visible light can get"
+  },
+  {
+    "question": "what not to say to eating disorder"
+  },
+  {
+    "question": "what is the disease osteonecrosis of the jaw ?"
+  },
+  {
+    "question": "who is the creator of bing"
+  },
+  {
+    "question": "what are the three mental states in psychology"
+  },
+  {
+    "question": "How has Nigerian fashion influenced global trends?"
+  },
+  {
+    "question": "when did world war 2 end"
+  },
+  {
+    "question": "how many innings in overtime in baseball"
+  },
+  {
+    "question": "what motors do ducatis have"
+  },
+  {
+    "question": "when did wwi begin"
+  },
+  {
+    "question": "what is peat moss good for growing ?"
+  },
+  {
+    "question": "who won fifa world cup 2010"
+  },
+  {
+    "question": "what countries are under the buddhism religion"
+  },
+  {
+    "question": "what is libya 's imr"
+  },
+  {
+    "question": "How Do You Find the mean of the squares of the first 10 counting numbers"
+  },
+  {
+    "question": "what is the sign for degrees"
+  },
+  {
+    "question": "what are debit cards made of"
+  },
+  {
+    "question": "Explain the significance of the Silk Road."
+  },
+  {
+    "question": "What are some common proverbs and their meanings?"
+  },
+  {
+    "question": "how are the # of electrons in each shell determined"
+  },
+  {
+    "question": "what is Network Interface Card ( NIC )"
+  },
+  {
+    "question": "what are the 4 largest cities in the country"
+  },
+  {
+    "question": "How do Nigerian cultural practices reflect history and heritage?"
+  },
+  {
+    "question": "when did germans enter paris in ww2"
+  },
+  {
+    "question": "where does the expression `` knocking on wood '' come from"
+  },
+  {
+    "question": "HOW MANY STRIPES ARE ON THE AMERICAN FLAG"
+  },
+  {
+    "question": "who was the first european in the americas"
+  },
+  {
+    "question": "how long is tekken blood vengeance movie"
+  },
+  {
+    "question": "What is the difference between a scalar and a vector?"
+  },
+  {
+    "question": "what are the Jets New York Jets ?"
+  },
+  {
+    "question": "How many Gray Wolves are in the world"
+  },
+  {
+    "question": "what is extreme right wing"
+  },
+  {
+    "question": "what do mucous membranes secrete"
+  },
+  {
+    "question": "what does arraignment mean"
+  },
+  {
+    "question": "what is the earth 's orbital speed"
+  },
+  {
+    "question": "What did Funmilayo Ransome-Kuti do ?"
+  },
+  {
+    "question": "how many books in bible"
+  },
+  {
+    "question": "what is a form of legal ownership"
+  },
+  {
+    "question": "What is the significance of Aso-Ebi?"
+  },
+  {
+    "question": "who pulmonary hypertension"
+  },
+  {
+    "question": "How is music integrated into Nigerian culture?"
+  },
+  {
+    "question": "What is Afrobeats and how has it influenced global music?"
+  },
+  {
+    "question": "what color is the eiffel tower"
+  },
+  {
+    "question": "how is a backpack made"
+  },
+  {
+    "question": "when was supply chain management developed"
+  },
+  {
+    "question": "what religions used henna"
+  },
+  {
+    "question": "when was the first nfl madden game released"
+  },
+  {
+    "question": "what are anti inflammatories"
+  },
+  {
+    "question": "what are the characteristics of an ethnic group"
+  },
+  {
+    "question": "How do solar panels convert sunlight into electricity?"
+  },
+  {
+    "question": "what is a mule in coins"
+  },
+  {
+    "question": "who reports the consumer price index"
+  },
+  {
+    "question": "what is baume hydrochloric acid"
+  },
+  {
+    "question": "How do weather and climate differ?"
+  },
+  {
+    "question": "What causes earthquakes?"
+  },
+  {
+    "question": "what carrier does straight talk use"
+  },
+  {
+    "question": "How is Nigerian hip-hop unique?"
+  },
+  {
+    "question": "when was bow wow born"
+  },
+  {
+    "question": "What Causes Brain Freeze"
+  },
+  {
+    "question": "what is adem disease"
+  },
+  {
+    "question": "how is hydrogen produced"
+  },
+  {
+    "question": "what percent of total energy is solar energy"
+  },
+  {
+    "question": "how long did the roman empire last"
+  },
+  {
+    "question": "Explain the concept of a food chain."
+  },
+  {
+    "question": "what does the royal family do"
+  },
+  {
+    "question": "who was the first one to invent medicine"
+  },
+  {
+    "question": "What is an asymptote in graph theory?"
+  },
+  {
+    "question": "How does a lithium-ion battery function?"
+  },
+  {
+    "question": "how does british succession work"
+  },
+  {
+    "question": "What is gentrification and what are its effects?"
+  },
+  {
+    "question": "what produces primary xylem ?"
+  },
+  {
+    "question": "where was princess diana from"
+  },
+  {
+    "question": "when was Pope Benedict XVI elected ?"
+  },
+  {
+    "question": "what is in a pasty"
+  },
+  {
+    "question": "Explain the Fundamental Theorem of Calculus."
+  },
+  {
+    "question": "what year was gulf war"
+  },
+  {
+    "question": "how is root beer made ?"
+  },
+  {
+    "question": "how does grecian formula work ?"
+  },
+  {
+    "question": "how many star wars movies are there"
+  },
+  {
+    "question": "how a rocket engine works"
+  },
+  {
+    "question": "Explain the importance of the Berlin Conference of 1884."
+  },
+  {
+    "question": "what shape are arrondissement organized"
+  },
+  {
+    "question": "where is bastille day celebrated"
+  },
+  {
+    "question": "What is the largest country by land area?"
+  },
+  {
+    "question": "What is the history and significance of the city of Lagos in Nigeria?"
+  },
+  {
+    "question": "what is 9/11 bombings"
+  },
+  {
+    "question": "what is the rationale for outsourcing in firms"
+  },
+  {
+    "question": "what year did keeping up with the kardashians begin"
+  },
+  {
+    "question": "what are the health effects of drinking bottled water"
+  },
+  {
+    "question": "How to download whatsapp"
+  },
+  {
+    "question": "Explain the impact of deforestation on the Amazon rainforest."
+  },
+  {
+    "question": "what culture is mariah carey"
+  },
+  {
+    "question": "Can you explain the role of women in Nigerian society and politics?"
+  },
+  {
+    "question": "What is a surveyors wheel"
+  },
+  {
+    "question": "what was the height of the benin empire"
+  },
+  {
+    "question": "What percentile is my income of 140,000 of the population ?"
+  },
+  {
+    "question": "how a silencer works"
+  },
+  {
+    "question": "how cds are read"
+  },
+  {
+    "question": "What is the capital of France?"
+  },
+  {
+    "question": "what does s in ulysses s grant stand for"
+  },
+  {
+    "question": "where do cruises dock in new york city"
+  },
+  {
+    "question": "what kind of material was able to survive near the sun during the development of the solar system"
+  },
+  {
+    "question": "How does the Nigerian government operate and what is its structure?"
+  },
+  {
+    "question": "what is a high energy lithium battery"
+  },
+  {
+    "question": "how many social classes existed in the han dynasty"
+  },
+  {
+    "question": "what kind of legal remedy is it to ask someone to fulfill there promise"
+  },
+  {
+    "question": "How many bones are there in the human body?"
+  },
+  {
+    "question": "when did thomas jefferson become president"
+  },
+  {
+    "question": "what is amoxicillin for ?"
+  },
+  {
+    "question": "what is neo lubrication"
+  },
+  {
+    "question": "who is shem in the bible"
+  },
+  {
+    "question": "what is a code white in weather"
+  },
+  {
+    "question": "what color is burgundy"
+  },
+  {
+    "question": "what affects the money supply"
+  },
+  {
+    "question": "what is el mate"
+  },
+  {
+    "question": "what is selenium and how used"
+  },
+  {
+    "question": "what is an .msi file"
+  },
+  {
+    "question": "How to screenshot on mac"
+  },
+  {
+    "question": "where does the return address go on mail"
+  },
+  {
+    "question": "how deep can be drill for deep underwater"
+  },
+  {
+    "question": "how much does a bugatti veyron cost"
+  },
+  {
+    "question": "how are ribosomes made"
+  },
+  {
+    "question": "what is 1/10 net 30"
+  },
+  {
+    "question": "What are the major deserts of the world?"
+  },
+  {
+    "question": "Describe the concept of mathematical induction."
+  },
+  {
+    "question": "Who are some famous actors and actresses?"
+  },
+  {
+    "question": "What is an economic feature ?"
+  },
+  {
+    "question": "what is the source of geothermal energy"
+  },
+  {
+    "question": "what were the major obstacles facing the Industrial Revolution/"
+  },
+  {
+    "question": "how much data did the 3.5 inch floppy hold"
+  },
+  {
+    "question": "who said dallas cowboys were america 's team"
+  },
+  {
+    "question": "What did Nnamdi Azikiwe do ?"
+  },
+  {
+    "question": "what county is Augusta , GA located in ?"
+  },
+  {
+    "question": "what was the post modernist era in literature ?"
+  },
+  {
+    "question": "What was the original name of the holiday known today as Halloween ?"
+  },
+  {
+    "question": "what is hosting a website"
+  },
+  {
+    "question": "What are the causes and effects of global warming?"
+  },
+  {
+    "question": "what was the main contribution of john maynard keynes made to economics"
+  },
+  {
+    "question": "where is solar energy present\\\\"
+  },
+  {
+    "question": "what is an assist in basketball"
+  },
+  {
+    "question": "how big are baby zebras when born"
+  },
+  {
+    "question": "Can you explain the theory of relativity in simple terms?"
+  },
+  {
+    "question": "What is hydrogen in"
+  },
+  {
+    "question": "what is jello made of"
+  },
+  {
+    "question": "what is the origin of fiona"
+  },
+  {
+    "question": "what do platypus eat"
+  },
+  {
+    "question": "when was scooby doo created"
+  },
+  {
+    "question": "where is the place of publication on a website"
+  },
+  {
+    "question": "How is Nigerian literature represented globally?"
+  },
+  {
+    "question": "what holidays are in the summer"
+  },
+  {
+    "question": "what crimes do not have digital evidence"
+  },
+  {
+    "question": "how were letters sealed in the 1800s"
+  },
+  {
+    "question": "what is in caffeine"
+  },
+  {
+    "question": "where did the first airplane fly"
+  },
+  {
+    "question": "What does Rapture meaning in a theological sense ?"
+  },
+  {
+    "question": "What is the largest ocean on Earth?"
+  },
+  {
+    "question": "what is primary medicine"
+  },
+  {
+    "question": "what is religions of thailand"
+  },
+  {
+    "question": "Who was John Scott regarding the Bible"
+  },
+  {
+    "question": "how many blind people are there "
+  },
+  {
+    "question": "what kind of cut is tri tip"
+  },
+  {
+    "question": "what is a bad beat in poker"
+  },
+  {
+    "question": "what does quotations do in search"
+  },
+  {
+    "question": "where is the country andorra located"
+  },
+  {
+    "question": "where is osaka japan"
+  },
+  {
+    "question": "What is the significance of Good Friday ?"
+  },
+  {
+    "question": "what was the date of pearl harbor"
+  },
+  {
+    "question": "what does low self esteem mean"
+  },
+  {
+    "question": "what is genetic differences"
+  },
+  {
+    "question": "What is the smallest planet in our solar system?"
+  },
+  {
+    "question": "How are the directions of the velocity and force vectors related in a circular motion"
+  },
+  {
+    "question": "who usually catches the football"
+  },
+  {
+    "question": "who is on the $ 1000 bill"
+  },
+  {
+    "question": "what country has the most muslims in the world"
+  },
+  {
+    "question": "who created bing"
+  },
+  {
+    "question": "how did gandhi die"
+  },
+  {
+    "question": "what are tires made of"
+  },
+  {
+    "question": "what are the players in Quidditch ?"
+  },
+  {
+    "question": "how are tropical storms and hurricanes named"
+  },
+  {
+    "question": "WHAT IS THE LENGTH OF A NAUTICAL MILE"
+  },
+  {
+    "question": "What did Wole Soyinka do ?"
+  },
+  {
+    "question": "how are business ethics different in Africa and United States"
+  },
+  {
+    "question": "what does Mazel tov ! mean"
+  },
+  {
+    "question": "when do i plant triticale"
+  },
+  {
+    "question": "what is definition of psychotic"
+  },
+  {
+    "question": "what is the role of heredity"
+  },
+  {
+    "question": "where does cashmere come from"
+  },
+  {
+    "question": "what movie won the academy award for best picture in 2000"
+  },
+  {
+    "question": "what measurement is a furlong"
+  },
+  {
+    "question": "how frequent do you inspect hydrants"
+  },
+  {
+    "question": "how are the archegonia of the fern and pine cone similar"
+  },
+  {
+    "question": "what is leasehold ; real estate"
+  },
+  {
+    "question": "how many states have open carry gun laws"
+  },
+  {
+    "question": "what caused the world war 2"
+  },
+  {
+    "question": "where are the ten commandments in the bible"
+  },
+  {
+    "question": "Can you explain the importance of oil in Nigeria's economy?"
+  },
+  {
+    "question": "what year lord of rings made ?"
+  },
+  {
+    "question": "How do festivals and celebrations in Nigeria reflect its cultural diversity?"
+  },
+  {
+    "question": "what is Non-profit infrastructure"
+  },
+  {
+    "question": "Describe the structure of DNA."
+  },
+  {
+    "question": "What is the chemical symbol for gold?"
+  },
+  {
+    "question": "what westerners include in pain and suffering"
+  },
+  {
+    "question": "what is that dot on the forehead of indian women\\\\"
+  },
+  {
+    "question": "how much are the harry potter movies worth"
+  },
+  {
+    "question": "what is the title of Hobbes main work"
+  },
+  {
+    "question": "when is international men 's day"
+  },
+  {
+    "question": "when is lunar new year 2011"
+  },
+  {
+    "question": "how do they harvest caviar ?"
+  },
+  {
+    "question": "how rare are cardiac issues with amitriptyline"
+  },
+  {
+    "question": "how many people are in the world"
+  },
+  {
+    "question": "what kind of wood was used for car trim ?"
+  },
+  {
+    "question": "what is the country with highest life expectancy"
+  },
+  {
+    "question": "how many bytes in an unsigned int c++"
+  },
+  {
+    "question": "how is power divided in in european countries"
+  },
+  {
+    "question": "what kind of transportation was there in the middle ages"
+  },
+  {
+    "question": "How do magnets work?"
+  },
+  {
+    "question": "WHAT COUNTRY IS MEXICO IN"
+  },
+  {
+    "question": "what is a major trend in land plant evolution"
+  },
+  {
+    "question": "how was marijuana discovered"
+  },
+  {
+    "question": "what is crohn 's and colitis"
+  },
+  {
+    "question": "what is the organic layer in an amoled screen"
+  },
+  {
+    "question": "what is a lapping machine"
+  },
+  {
+    "question": "where are statutes formed"
+  },
+  {
+    "question": "what happens in chrono trigger if you lose to lavos"
+  },
+  {
+    "question": "where does american airlines fly into italy"
+  },
+  {
+    "question": "How does the stock market work?"
+  },
+  {
+    "question": "What is the birth rate , death rate , life expectancy in Turkey"
+  },
+  {
+    "question": "where is shropshire , uk"
+  },
+  {
+    "question": "how do you get bed bugs"
+  },
+  {
+    "question": "How does Nigerian architecture reflect cultural influences?"
+  },
+  {
+    "question": "what is another name for cpu"
+  },
+  {
+    "question": "how is paper measured"
+  },
+  {
+    "question": "how many words are in a short story"
+  },
+  {
+    "question": "what is bullying aggression"
+  },
+  {
+    "question": "what is the normal inr range"
+  },
+  {
+    "question": "what is soy made from"
+  },
+  {
+    "question": "where translation on DNA happens"
+  },
+  {
+    "question": "what zones are tropical"
+  },
+  {
+    "question": "how many students go to University of Ibadan"
+  },
+  {
+    "question": "what is the name of the founder of doha"
+  },
+  {
+    "question": "where do mangos come from"
+  },
+  {
+    "question": "where do most political candidates get their money"
+  },
+  {
+    "question": "where in the world are smallpox common"
+  },
+  {
+    "question": "what material is a mouse pad made out of ?"
+  },
+  {
+    "question": "who invented the television"
+  },
+  {
+    "question": "what is blasting ( mining )"
+  },
+  {
+    "question": "who kill franz ferdinand ww1"
+  },
+  {
+    "question": "How is a computer used ?"
+  },
+  {
+    "question": "who was ho chi minh in vietnam war"
+  },
+  {
+    "question": "who composed the national anthem"
+  },
+  {
+    "question": "what is prefix phone number"
+  },
+  {
+    "question": "what continent is australia"
+  },
+  {
+    "question": "what are the top three laws in science"
+  },
+  {
+    "question": "what does am and pm stand for"
+  },
+  {
+    "question": "what classes are considered humanities"
+  },
+  {
+    "question": "how did the african slave trade affect africans in terms of economy"
+  },
+  {
+    "question": "what is a book index"
+  },
+  {
+    "question": "what is honey bee propolis"
+  },
+  {
+    "question": "what do UA 's detect"
+  },
+  {
+    "question": "What are the causes and effects of urban heat islands?"
+  },
+  {
+    "question": "What are some popular festivals?"
+  },
+  {
+    "question": "How do cultural practices vary across regions?"
+  },
+  {
+    "question": "what does the president of the usa do"
+  },
+  {
+    "question": "WHAT SINGER MARRIED HIS COUSIN"
+  },
+  {
+    "question": "what size drill to tap 1/4 in tap"
+  },
+  {
+    "question": "What causes the phenomenon of a rainbow?"
+  },
+  {
+    "question": "what is an aircraft interception"
+  },
+  {
+    "question": "how was color introduced in film ?"
+  },
+  {
+    "question": "what is the lowest temperature ever recorded in antarctica"
+  },
+  {
+    "question": "what is black hairy tongue disease"
+  },
+  {
+    "question": "Name some famous artists"
+  },
+  {
+    "question": "what are the three dominant political parties in America ?"
+  },
+  {
+    "question": "what is managerial engineering"
+  },
+  {
+    "question": "what produces calcitonin"
+  },
+  {
+    "question": "Describe the carbon cycle."
+  },
+  {
+    "question": "what is the salary for a representative"
+  },
+  {
+    "question": "what does the term means by paste and text"
+  },
+  {
+    "question": "how is today special ?"
+  },
+  {
+    "question": "What is the greenhouse effect?"
+  },
+  {
+    "question": "Where is the Great Barrier Reef located?"
+  },
+  {
+    "question": "how much was game boy color when it came out"
+  },
+  {
+    "question": "what does base jumping stand for"
+  },
+  {
+    "question": "who owns smirnoff"
+  },
+  {
+    "question": "how many district are in west bengal"
+  },
+  {
+    "question": "what does estee lauder do"
+  },
+  {
+    "question": "when was raphael born"
+  },
+  {
+    "question": "what state is the capital in"
+  },
+  {
+    "question": "what building did the romans accidentally burn"
+  },
+  {
+    "question": "who is the current Chief Justice of the supreme court ?"
+  },
+  {
+    "question": "How do you solve a system of linear equations?"
+  },
+  {
+    "question": "What is the significance of the Rosetta Stone in understanding ancient languages?"
+  },
+  {
+    "question": "what is Carbon 14 dating is a type of ?"
+  },
+  {
+    "question": "what happens to the light independent reactions of photosynthesis ?"
+  },
+  {
+    "question": "how many breeds have become extinct"
+  },
+  {
+    "question": "what people used mayan numeral system"
+  },
+  {
+    "question": "what the names of destiny 's child"
+  },
+  {
+    "question": "What did movie theaters do for sound before synchronized sound was introduced into film"
+  },
+  {
+    "question": "how did the world begin?"
+  },
+  {
+    "question": "what is a slugs slime made out of"
+  },
+  {
+    "question": "how often are meetings held for businesses"
+  },
+  {
+    "question": "what board game are they playing in the 17th episode of big bang theory ?"
+  },
+  {
+    "question": "when is the feast of St. Rita"
+  },
+  {
+    "question": "what is a Jennifer Convertible sofa"
+  },
+  {
+    "question": "Who is Cindy Sheehan and what was her 'peace camp '"
+  },
+  {
+    "question": "how does a cell function"
+  },
+  {
+    "question": "when did the titanic sink"
+  },
+  {
+    "question": "what countries legalize marijuana"
+  },
+  {
+    "question": "what is windows data protection data"
+  },
+  {
+    "question": "how was a lawyer called in latin"
+  },
+  {
+    "question": "what are the parts of a hand called"
+  },
+  {
+    "question": "How do tectonic plates affect geological features?"
+  },
+  {
+    "question": "what are the pittsburgh steeler colors"
+  },
+  {
+    "question": "what is metal music about"
+  },
+  {
+    "question": "what is a PCI port used for"
+  },
+  {
+    "question": "what are superannuation contributions ?"
+  },
+  {
+    "question": "what is my resting heart rate at age 24"
+  },
+  {
+    "question": "What is a millionth of a meter"
+  },
+  {
+    "question": "what does it mean to form a more perfect union"
+  },
+  {
+    "question": "where the streets have no name filming location"
+  },
+  {
+    "question": "What are some traditional healing practices?"
+  },
+  {
+    "question": "What are the major environmental challenges facing Nigeria today?"
+  },
+  {
+    "question": "Explain the concept of carbon footprint."
+  },
+  {
+    "question": "what structure is disulfide bonds"
+  },
+  {
+    "question": "what languages are spoken in south africa"
+  },
+  {
+    "question": "what it is a pilot study"
+  },
+  {
+    "question": "what do ancients myths explain"
+  },
+  {
+    "question": "what is a vetting process"
+  },
+  {
+    "question": "when was mexican independence won"
+  },
+  {
+    "question": "Explain the Doppler Effect."
+  },
+  {
+    "question": "What is the disk defragmenter tool"
+  },
+  {
+    "question": "what is cta used for"
+  },
+  {
+    "question": "What are the main agricultural products of Nigeria?"
+  },
+  {
+    "question": "What is the legal definition of `` natural born citizen '' ?"
+  },
+  {
+    "question": "What is the synopsis of King of Boys?"
+  },
+  {
+    "question": "who created the cato institute"
+  },
+  {
+    "question": "who was in great britain before the anglo-saxons ?"
+  },
+  {
+    "question": "what are the obstetric emergencies"
+  },
+  {
+    "question": "how many redwall books are there"
+  },
+  {
+    "question": "how do you know if a volcano is extinct"
+  },
+  {
+    "question": "What are the basic principles of Keynesian economics?"
+  },
+  {
+    "question": "what did isaac newton do"
+  },
+  {
+    "question": "How to lose weight"
+  },
+  {
+    "question": "what are new covenant church"
+  },
+  {
+    "question": "what is the gdp?"
+  },
+  {
+    "question": "how does a dredge work ?"
+  },
+  {
+    "question": "where is university of nelson mandela metropolitan located"
+  },
+  {
+    "question": "What is a black hole?"
+  },
+  {
+    "question": "what causes photo red eye"
+  },
+  {
+    "question": "How do you find the area of a trapezoid?"
+  },
+  {
+    "question": "when do geese lose their down"
+  },
+  {
+    "question": "How do you find the area of a parallelogram?"
+  },
+  {
+    "question": "what causes destruction of the ozone layer"
+  },
+  {
+    "question": "what country does not have nuclear plants"
+  },
+  {
+    "question": "what does a timing belt do"
+  },
+  {
+    "question": "how big can texel guinea pigs become"
+  },
+  {
+    "question": "how is single malt scotch made"
+  },
+  {
+    "question": "when does embryo secrete hgh"
+  },
+  {
+    "question": "What is the role of storytelling in Nigerian culture?"
+  },
+  {
+    "question": "how many websites on world wide web"
+  },
+  {
+    "question": "what video format will play in a DVD player"
+  },
+  {
+    "question": "how an oil rig works"
+  },
+  {
+    "question": "what is lean manufacturing and who developed"
+  },
+  {
+    "question": "how an outdoor wood boiler works"
+  },
+  {
+    "question": "what is four musical bars"
+  },
+  {
+    "question": "what do people usually give up for lent"
+  },
+  {
+    "question": "How are local governments structured and what are their responsibilities?"
+  },
+  {
+    "question": "How does the human immune system fight off infections?"
+  },
+  {
+    "question": "Who Makes Nexen Tires"
+  },
+  {
+    "question": "what is the server for the internet"
+  },
+  {
+    "question": "what are square diamonds called ?"
+  },
+  {
+    "question": "how fast is one g"
+  },
+  {
+    "question": "Who was Julius Caesar and what was his role in Roman history?"
+  },
+  {
+    "question": "what is UT testing"
+  },
+  {
+    "question": "what did sparta do around 650 bc"
+  },
+  {
+    "question": "Explain the properties of parallelograms."
+  },
+  {
+    "question": "Describe how to calculate the standard deviation."
+  },
+  {
+    "question": "What causes the Northern Lights?"
+  },
+  {
+    "question": "what is lung effusion"
+  },
+  {
+    "question": "What are the main political parties in Nigeria?"
+  },
+  {
+    "question": "what is in milk"
+  },
+  {
+    "question": "what are some chinese inventions"
+  },
+  {
+    "question": "how many innings makes an official game"
+  },
+  {
+    "question": "What are the primary causes of World War I?"
+  },
+  {
+    "question": "what is lost purchasing power"
+  },
+  {
+    "question": "What country has a single solid color flag"
+  },
+  {
+    "question": "What is the synopsis of The Wedding Party?"
+  },
+  {
+    "question": "What are some traditional dishes?"
+  },
+  {
+    "question": "what is pci Interface"
+  },
+  {
+    "question": "what did daniel interpret to nabucodonosor chapter 2,3"
+  },
+  {
+    "question": "what is the primary language of South Korea"
+  },
+  {
+    "question": "What did Fela Kuti do ?"
+  },
+  {
+    "question": "What are the functions of the State Governments in Nigeria?"
+  },
+  {
+    "question": "When Is Passover Over"
+  },
+  {
+    "question": "What is the synopsis of Chief Daddy?"
+  },
+  {
+    "question": "where are cover girl cosmetics sold"
+  },
+  {
+    "question": "What is the enzyme responsible for transferring electrons to oxygen in the electron transport chain ?"
+  },
+  {
+    "question": "who killed julius caesar"
+  },
+  {
+    "question": "what is a redshirt freshman football player"
+  },
+  {
+    "question": "what temperatures can koi live in ?"
+  },
+  {
+    "question": "who does chris humphries play for"
+  },
+  {
+    "question": "how many countries are member of the eu ?"
+  },
+  {
+    "question": "What does the idea of effective nuclear charge tell us"
+  },
+  {
+    "question": "how many kids does archie manning have"
+  },
+  {
+    "question": "what are some countries"
+  },
+  {
+    "question": "Describe the process of lawmaking in Nigeria."
+  },
+  {
+    "question": "What is the longest river in the world?"
+  },
+  {
+    "question": "what does Gringo mean"
+  },
+  {
+    "question": "In which year did the Titanic sink?"
+  },
+  {
+    "question": "What is the role of religion in Nigeria?"
+  },
+  {
+    "question": "what is busiest airport in the country"
+  },
+  {
+    "question": "what artist has won the most grammys"
+  },
+  {
+    "question": "what is Christian Protestant ?"
+  },
+  {
+    "question": "what is the scientific name of a cardinal bird"
+  },
+  {
+    "question": "how is human height measured"
+  },
+  {
+    "question": "how many muscles in the body"
+  },
+  {
+    "question": "How does a vaccine work to protect the body from disease?"
+  },
+  {
+    "question": "when did cigarette commercials get banned"
+  },
+  {
+    "question": "what is 2nd or 3rd cousin once removed"
+  },
+  {
+    "question": "what can i do with a masters of fine arts degree"
+  },
+  {
+    "question": "how much will a transfusion of platelet apheresis raise the platelet count"
+  },
+  {
+    "question": "who contacted muhammad"
+  },
+  {
+    "question": "what country is belize in"
+  },
+  {
+    "question": "Who are some renowned musicians?"
+  },
+  {
+    "question": "What are permutations and combinations?"
+  },
+  {
+    "question": "How is the Nigerian Constitution amended?"
+  },
+  {
+    "question": "what are web related servers"
+  },
+  {
+    "question": "when did ireland become republic"
+  },
+  {
+    "question": "What causes rogue waves"
+  },
+  {
+    "question": "how many nuclear countries in the world"
+  },
+  {
+    "question": "when is the first day of spring"
+  },
+  {
+    "question": "where was ms-13 originally from"
+  },
+  {
+    "question": "Explain the concept of vectors."
+  },
+  {
+    "question": "what country is dubai in"
+  },
+  {
+    "question": "what is the purpose of vitamin d"
+  },
+  {
+    "question": "when did the cold war start"
+  },
+  {
+    "question": "where is island of belize"
+  },
+  {
+    "question": "what is the main primary bronchus"
+  },
+  {
+    "question": "what religions are considered christian"
+  },
+  {
+    "question": "what types of trees , flowers , or plants are commonly found"
+  },
+  {
+    "question": "Discuss the role of civil society organizations in African governance."
+  },
+  {
+    "question": "where does the word woman comes from"
+  },
+  {
+    "question": "what creates sonic boom"
+  },
+  {
+    "question": "what does the goddess athena tell odysseus he is to do ?"
+  },
+  {
+    "question": "What Are Mnemonic Devices"
+  },
+  {
+    "question": "what does it mean to be a commonwealth state"
+  },
+  {
+    "question": "how are glacier caves formed ?"
+  },
+  {
+    "question": "what is an asset account"
+  },
+  {
+    "question": "what are organic semiconductors and what is concept of homo and lumo in organic semiconductor"
+  },
+  {
+    "question": "Describe the cultural significance of the Renaissance."
+  },
+  {
+    "question": "what is a typical annuity premium"
+  },
+  {
+    "question": "where does apple operate"
+  },
+  {
+    "question": "what is level of agreement mean"
+  },
+  {
+    "question": "What was the impact of the Industrial Revolution?"
+  },
+  {
+    "question": "what does a laboratory in a gynecologist office consist of"
+  },
+  {
+    "question": "who sang that song-a change is going to come"
+  },
+  {
+    "question": "what is .17 hmr caliber"
+  },
+  {
+    "question": "what are the ten things god cursed pharaoh with"
+  },
+  {
+    "question": "What are the main components of the water cycle?"
+  },
+  {
+    "question": "how school librarians support students with disabilities"
+  },
+  {
+    "question": "what happens when the baroreceptor reflex is activated"
+  },
+  {
+    "question": "How Do You Get Hepatitis C"
+  },
+  {
+    "question": "What is the song Lonely at the Top by Asake about?"
+  },
+  {
+    "question": "how does black pepper grow"
+  },
+  {
+    "question": "what does a vote to table a motion mean ?"
+  },
+  {
+    "question": "how long has 4-H been around"
+  },
+  {
+    "question": "where did world war 1 start"
+  },
+  {
+    "question": "who played batman in dark knight"
+  },
+  {
+    "question": "when was the president elected"
+  },
+  {
+    "question": "what is auto quarter panel"
+  },
+  {
+    "question": "How many states and territories are within India ?"
+  },
+  {
+    "question": "How do people typically greet each other?"
+  },
+  {
+    "question": "what is a r4 card"
+  },
+  {
+    "question": "what is a league in the sea"
+  },
+  {
+    "question": "what is the official language?"
+  },
+  {
+    "question": "what is the largest credit union"
+  },
+  {
+    "question": "where is marijuana legal"
+  },
+  {
+    "question": "what type of spider has the most eyes"
+  },
+  {
+    "question": "what was john adams doing to help france"
+  },
+  {
+    "question": "what made the civil war different from others"
+  },
+  {
+    "question": "what are loan originations"
+  },
+  {
+    "question": "what is the ph of potato chips ?"
+  },
+  {
+    "question": "Describe the significance of the Nile River."
+  },
+  {
+    "question": "how many people live in atlanta georgia"
+  },
+  {
+    "question": "what is spelt flour"
+  },
+  {
+    "question": "what is middle class"
+  },
+  {
+    "question": "who has won the most grammys"
+  },
+  {
+    "question": "where did the vietnamese settle in america"
+  },
+  {
+    "question": "how is public policy created"
+  },
+  {
+    "question": "what songs are on the new lady gaga album"
+  },
+  {
+    "question": "How does a lever work?"
+  },
+  {
+    "question": "what are stocks and bonds"
+  },
+  {
+    "question": "where is green bay packers from"
+  },
+  {
+    "question": "who shot malcolm x"
+  },
+  {
+    "question": "when did women get the right to own property"
+  },
+  {
+    "question": "who did cuddy get engaged to on house"
+  },
+  {
+    "question": "how are cholera and typhus transmitted and prevented"
+  },
+  {
+    "question": "how many died in hiroshima and nagasaki"
+  },
+  {
+    "question": "what are spoilers for"
+  },
+  {
+    "question": "what is the deepest muscle in your body"
+  },
+  {
+    "question": "what food group is alcohol"
+  },
+  {
+    "question": "What are the unique aspects of Nigerian cuisine?"
+  },
+  {
+    "question": "where is j.cole from"
+  },
+  {
+    "question": "who was the quarterbacks in the super bowl between the steelers nd the cowboys"
+  },
+  {
+    "question": "What are the functions of the United Nations?"
+  },
+  {
+    "question": "when barack obama was born"
+  },
+  {
+    "question": "who invented the thermometer"
+  },
+  {
+    "question": "What are the main types of renewable energy?"
+  },
+  {
+    "question": "what year did the last monkeys go into space"
+  },
+  {
+    "question": "who is the actor that plays harry potter"
+  },
+  {
+    "question": "what is a cache and dash ?"
+  },
+  {
+    "question": "when did playstation 3 first launch"
+  },
+  {
+    "question": "what part of the corn is used in ethanol production"
+  },
+  {
+    "question": "what is an atomic number periodic table"
+  },
+  {
+    "question": "How do you calculate the circumference of an ellipse?"
+  },
+  {
+    "question": "what is a hosting company on a website"
+  },
+  {
+    "question": "what is the resolution of a standard dvd ?"
+  },
+  {
+    "question": "What was the significance of the Apollo moon landing?"
+  },
+  {
+    "question": "what is mpeg4 avc or sp/asp"
+  },
+  {
+    "question": "what goods are imported in the Democratic Republic of Congo"
+  },
+  {
+    "question": "what kind a is tilapia"
+  },
+  {
+    "question": "What are the fundamentals of Bretton Woods system for fixed exchange rates"
+  },
+  {
+    "question": "Who controlled Alaska before US ?"
+  },
+  {
+    "question": "who is ezekiel in the bible"
+  },
+  {
+    "question": "how are public schools funded"
+  },
+  {
+    "question": "What are the primary functions of the World Bank?"
+  },
+  {
+    "question": "Who is the current Secretary-General of the United Nations?"
+  },
+  {
+    "question": "What is the full name of the first lady and the vp wife"
+  },
+  {
+    "question": "when was IBM Power 6 announced"
+  },
+  {
+    "question": "how much sulfur dioxide is in propane"
+  },
+  {
+    "question": "what to make with linen"
+  },
+  {
+    "question": "how many presidents have been assassinated"
+  },
+  {
+    "question": "What generates gamma radiation"
+  },
+  {
+    "question": "how many percent is a basis point"
+  },
+  {
+    "question": "what is base operations & maintenance"
+  },
+  {
+    "question": "What are the characteristics of Ugu?"
+  },
+  {
+    "question": "what is the function of the hard palate"
+  },
+  {
+    "question": "Describe the method of long division."
+  },
+  {
+    "question": "where is testosterone produced"
+  },
+  {
+    "question": "what countries are in central america ?"
+  },
+  {
+    "question": "what is a melon baller used for"
+  },
+  {
+    "question": "what was the height of the oyo empire"
+  },
+  {
+    "question": "what caribbean island is part of France ?"
+  },
+  {
+    "question": "how does weather happen"
+  },
+  {
+    "question": "What to do for low lymphocyte count"
+  },
+  {
+    "question": "How do you find the slope of a line?"
+  },
+  {
+    "question": "What are the main principles of sustainable development?"
+  },
+  {
+    "question": "who have presidents pardoned"
+  },
+  {
+    "question": "what are the rivers in india"
+  },
+  {
+    "question": "what is special about flounder in little mermaid"
+  },
+  {
+    "question": "what caused ww"
+  },
+  {
+    "question": "how many domain names are registered"
+  },
+  {
+    "question": "where did the early humans live ?"
+  },
+  {
+    "question": "what staffing policy does lenovo use currently"
+  },
+  {
+    "question": "when was peter kilmartin elected"
+  },
+  {
+    "question": "What is a prime number?"
+  },
+  {
+    "question": "what is bourbon made of"
+  },
+  {
+    "question": "Explain the concept of ecotourism."
+  },
+  {
+    "question": "what type of sound does a rooster make ?"
+  },
+  {
+    "question": "How is art represented in Nigerian society?"
+  },
+  {
+    "question": "what is cu the element"
+  },
+  {
+    "question": "what are the official languages of nigeria"
+  },
+  {
+    "question": "how do forensic auditors examine financial reporting"
+  },
+  {
+    "question": "what is Nigeria's currency"
+  },
+  {
+    "question": "what is aluminum nitrate used for"
+  },
+  {
+    "question": "what is the word for lung cancer ?"
+  },
+  {
+    "question": "what do bumble bees do"
+  },
+  {
+    "question": "Explain the role of the National Assembly in Nigeria."
+  },
+  {
+    "question": "what are lobbying groups"
+  },
+  {
+    "question": "what are geologists currently researching"
+  },
+  {
+    "question": "What causes solar and lunar eclipses?"
+  },
+  {
+    "question": "how much water is the human body made of"
+  },
+  {
+    "question": "Where\u2019s the closest pharmacy"
+  },
+  {
+    "question": "what does the universal law of gravitation state"
+  },
+  {
+    "question": "what makes a dwarf planet"
+  },
+  {
+    "question": "how many rounds in boxing"
+  },
+  {
+    "question": "what is the voltage of a medical defibrillator"
+  },
+  {
+    "question": "What are the primary causes of deforestation?"
+  },
+  {
+    "question": "where is bloemfontein in africa"
+  },
+  {
+    "question": "how does egg substitute effect the cake if u put in"
+  },
+  {
+    "question": "when were the first firemen"
+  },
+  {
+    "question": "how does the e coli bacteria cause death"
+  },
+  {
+    "question": "what is a right wing christian"
+  },
+  {
+    "question": "what is a HVAC company"
+  },
+  {
+    "question": "how much does it cost to set up hydroelectric"
+  },
+  {
+    "question": "who was the first person to climb the mount of the holy cross"
+  },
+  {
+    "question": "Describe the achievements of the Ming Dynasty."
+  },
+  {
+    "question": "when slavery abolished"
+  },
+  {
+    "question": "Where is the real Mona Lisa located?"
+  },
+  {
+    "question": "what is captcha code"
+  },
+  {
+    "question": "what is the language of mali"
+  },
+  {
+    "question": "what is the meaning of reimbursement"
+  },
+  {
+    "question": "Describe the concept of limits in calculus."
+  },
+  {
+    "question": "Describe the impact of foreign aid on African politics."
+  },
+  {
+    "question": "what is another name for the large intestine"
+  },
+  {
+    "question": "where is the rosetta stone located in 2010"
+  },
+  {
+    "question": "how much is 1 tablespoon of water"
+  },
+  {
+    "question": "what country did wine originate in"
+  },
+  {
+    "question": "what area code is 031"
+  },
+  {
+    "question": "what is the comanche housing made from"
+  },
+  {
+    "question": "what is a luxeon led"
+  },
+  {
+    "question": "what domain is eu"
+  },
+  {
+    "question": "what nerves run through the humerus"
+  },
+  {
+    "question": "Who created Facebook"
+  },
+  {
+    "question": "when a cell divides"
+  },
+  {
+    "question": "Describe the life cycle of a star."
+  },
+  {
+    "question": "what are metaphors used for"
+  },
+  {
+    "question": "what are the names of the 7 dwarfs"
+  },
+  {
+    "question": "where is dora from"
+  },
+  {
+    "question": "what age group is generation x"
+  },
+  {
+    "question": "what is feedback mechanism in plants during respiration"
+  },
+  {
+    "question": "Describe the method of completing the square."
+  },
+  {
+    "question": "how are storm names determined ?"
+  },
+  {
+    "question": "how many classes of vitamins"
+  },
+  {
+    "question": "what is buttoned-down shirt ?"
+  },
+  {
+    "question": "where did the mayflower land"
+  },
+  {
+    "question": "What are the different states of matter?"
+  },
+  {
+    "question": "how many cylinders mitsubishi galant 1997"
+  },
+  {
+    "question": "what is the defensive line in football called"
+  },
+  {
+    "question": "where in gospel of mark does the disciples question Christ deity"
+  },
+  {
+    "question": "what is prince williams last name"
+  },
+  {
+    "question": "what does informal logic mean"
+  },
+  {
+    "question": "where was pepsi invented"
+  },
+  {
+    "question": "who's face is on money"
+  },
+  {
+    "question": "what does metes and bounds mean"
+  },
+  {
+    "question": "what is the prognosis of stomach cancer"
+  },
+  {
+    "question": "what is a full job time ? ?"
+  },
+  {
+    "question": "How do plants reproduce?"
+  },
+  {
+    "question": "What committees are joint committees"
+  },
+  {
+    "question": "when was the internet started"
+  },
+  {
+    "question": "what is the @ sign called ?"
+  },
+  {
+    "question": "how many oxygen and nitrogen in nitrate ?"
+  },
+  {
+    "question": "where does cellular respiration occur"
+  },
+  {
+    "question": "how many airports in israel"
+  },
+  {
+    "question": "What Is Argentina Known For"
+  },
+  {
+    "question": "what country is turkey in"
+  },
+  {
+    "question": "what kind of food does the british blue cat eat ?"
+  },
+  {
+    "question": "what is the world 's biggest religion"
+  },
+  {
+    "question": "what year did South Africa become a team in rugby"
+  },
+  {
+    "question": "Explain the concept of sustainable development."
+  },
+  {
+    "question": "when is administrative assistant day"
+  },
+  {
+    "question": "What are some Nigerian customs surrounding birth and naming ceremonies?"
+  },
+  {
+    "question": "what is the fourth dimension of physics"
+  },
+  {
+    "question": "what are stalagmites and stalactites"
+  },
+  {
+    "question": "how south african leaders are elected"
+  },
+  {
+    "question": "how did king herod die"
+  },
+  {
+    "question": "what is evoked otoacoustic emissions"
+  },
+  {
+    "question": "how many baseball teams usa"
+  },
+  {
+    "question": "how many apple store are there in total ?"
+  },
+  {
+    "question": "what is a gsm cell phone"
+  },
+  {
+    "question": "Who was Confucius and what was his philosophy?"
+  },
+  {
+    "question": "how was the phone invented"
+  },
+  {
+    "question": "what is vitamin a for"
+  },
+  {
+    "question": "What are the challenges and opportunities of the tech industry in Nigeria?"
+  },
+  {
+    "question": "what is fuel oil used for"
+  },
+  {
+    "question": "what is older pyramid or stonehedge"
+  },
+  {
+    "question": "What are the primary causes of soil erosion?"
+  },
+  {
+    "question": "What are some traditional games and sports?"
+  },
+  {
+    "question": "what is the difference between multistage and cluster sampling"
+  },
+  {
+    "question": "Define the term \"irony\" and give an example."
+  },
+  {
+    "question": "when is halley 's comet next"
+  },
+  {
+    "question": "where do you find iodine"
+  },
+  {
+    "question": "How is the pothole formed"
+  },
+  {
+    "question": "what is endodontic dentistry"
+  },
+  {
+    "question": "who won the women 's world cup"
+  },
+  {
+    "question": "what naturally occurring isotopes does cobalt have"
+  },
+  {
+    "question": "what is the root word of ovaries"
+  },
+  {
+    "question": "what is right to set off payments"
+  },
+  {
+    "question": "How has pop culture evolved over the years?"
+  },
+  {
+    "question": "what happened to superman in the comics"
+  },
+  {
+    "question": "what is the average time it takes to go through aa 12 step program"
+  },
+  {
+    "question": "what is topsoil used for"
+  },
+  {
+    "question": "how many eukaryotic cells are in a animal ?"
+  },
+  {
+    "question": "What are the different types of angles?"
+  },
+  {
+    "question": "what is a brindle boxer"
+  },
+  {
+    "question": "Explain the significance of the periodic table."
+  },
+  {
+    "question": "how do drugs impact the human body"
+  },
+  {
+    "question": "What did Chinua Achebe do ?"
+  },
+  {
+    "question": "how is sociology different from thinking"
+  },
+  {
+    "question": "what is the name for an old horse-drawn vehicle"
+  },
+  {
+    "question": "what is the difference between diabetic and adiabatic process"
+  },
+  {
+    "question": "what is the address of mother 's park & ride in wayne nj"
+  },
+  {
+    "question": "how is slugging percentage calculated"
+  },
+  {
+    "question": "what do biologists do"
+  },
+  {
+    "question": "how did the chernobyl nuclear disaster affect nature"
+  },
+  {
+    "question": "what does tonneau mean on a watch ?"
+  },
+  {
+    "question": "what causes Phthisis bulbi after birth"
+  },
+  {
+    "question": "who put the bible in verses"
+  },
+  {
+    "question": "what is the female symbol called"
+  },
+  {
+    "question": "What country is the largest stalagmite"
+  },
+  {
+    "question": "what is the use of a sales invoice ?"
+  },
+  {
+    "question": "what to look for with GI bleeding"
+  },
+  {
+    "question": "what are the impacts of information communication technology to public relation practices"
+  },
+  {
+    "question": "Who Discovered Nuclear Power"
+  },
+  {
+    "question": "where did halley 's comet come from"
+  },
+  {
+    "question": "what is the format of the citizenship test"
+  },
+  {
+    "question": "how did phone numbers get split 3 than 4"
+  },
+  {
+    "question": "what are the units for volts"
+  },
+  {
+    "question": "What is the national dish?"
+  },
+  {
+    "question": "what is a constant in math ?"
+  },
+  {
+    "question": "what are batteries made up of"
+  },
+  {
+    "question": "how did the civil war end"
+  },
+  {
+    "question": "what is a chronograph watch"
+  },
+  {
+    "question": "what do cyberstalkers do"
+  },
+  {
+    "question": "what does an advocacy website promote ?"
+  },
+  {
+    "question": "what is life all about"
+  },
+  {
+    "question": "where was the auto industry started"
+  },
+  {
+    "question": "What is the first program to run during a system boot sequence ?"
+  },
+  {
+    "question": "what are the sulfas"
+  },
+  {
+    "question": "What led to the dissolution of the Soviet Union?"
+  },
+  {
+    "question": "what does a cutter do"
+  },
+  {
+    "question": "What are the main languages spoken in Nigeria and where are they predominant?"
+  },
+  {
+    "question": "what is ethernet gigabit"
+  },
+  {
+    "question": "Explain the role of the Independent National Electoral Commission (INEC)."
+  },
+  {
+    "question": "what is renaissance english"
+  },
+  {
+    "question": "where did the nickname packers come from green bay"
+  },
+  {
+    "question": "How does the internet work?"
+  },
+  {
+    "question": "what do pigs eat"
+  },
+  {
+    "question": "what are the 4 eras of time which one do we live in"
+  },
+  {
+    "question": "what model years did the ford focus zx3 have the zetec engine"
+  },
+  {
+    "question": "what is alcohol content of beer per volume"
+  },
+  {
+    "question": "what is the average income"
+  },
+  {
+    "question": "how does uv light activated fluorescence"
+  },
+  {
+    "question": "how does a solid state drive work"
+  },
+  {
+    "question": "How is the President of Nigeria elected and what are their powers?"
+  },
+  {
+    "question": "what is david from the bible diet"
+  },
+  {
+    "question": "What is the difference between rational and irrational numbers?"
+  },
+  {
+    "question": "what is the largest major league sport in the world ?"
+  },
+  {
+    "question": "what type of batteries are 357 ( LR44 )"
+  },
+  {
+    "question": "what countries belong with the united nations"
+  },
+  {
+    "question": "What are the major mountain ranges of the world?"
+  },
+  {
+    "question": "how was the moon formed"
+  },
+  {
+    "question": "what cards do you need in poker to get a royal flush"
+  },
+  {
+    "question": "What are some popular television shows?"
+  },
+  {
+    "question": "How did the pendulum improve upon earlier clocks ?"
+  },
+  {
+    "question": "what percent of kids 15 and under make up the human population"
+  },
+  {
+    "question": "what is wonton soup made of"
+  },
+  {
+    "question": "What is the impact of remittances from the Nigerian diaspora on the economy?"
+  },
+  {
+    "question": "what part of the pig is bacon"
+  },
+  {
+    "question": "How do you solve a quadratic equation?"
+  },
+  {
+    "question": "What are the causes and consequences of deforestation?"
+  },
+  {
+    "question": "How do latitude and longitude work?"
+  },
+  {
+    "question": "Name some major holidays"
+  },
+  {
+    "question": "Describe the geographical importance of the Panama Canal."
+  },
+  {
+    "question": "what is a penny made of"
+  },
+  {
+    "question": "Describe the Golden Age of Islam and its contributions."
+  },
+  {
+    "question": "What is the value of understanding cross-cultural psychology ?"
+  },
+  {
+    "question": "what are dialysis tubes"
+  },
+  {
+    "question": "what is metformin used for"
+  },
+  {
+    "question": "how much is banking salary a week"
+  },
+  {
+    "question": "what are add ons"
+  },
+  {
+    "question": "how much total wealth in USA"
+  },
+  {
+    "question": "What is the process of photosynthesis in plants?"
+  },
+  {
+    "question": "How has Nigeria been affected by climate change?"
+  },
+  {
+    "question": "who built the first ship"
+  },
+  {
+    "question": "what is an EPUB file"
+  },
+  {
+    "question": "how many canals in mandibular first molar"
+  },
+  {
+    "question": "how many millions of years have great white sharks been around ?"
+  },
+  {
+    "question": "Who is the current Prime Minister of the United Kingdom?"
+  },
+  {
+    "question": "what temperature is a salt ice bath"
+  },
+  {
+    "question": "how are sheep slaughtered"
+  },
+  {
+    "question": "what is latitude for observer at equator"
+  },
+  {
+    "question": "How does the system of checks and balances work in Nigeria?"
+  },
+  {
+    "question": "how many bones are in the skeletal system is composed of 306 bones"
+  },
+  {
+    "question": "what is considered a large car"
+  },
+  {
+    "question": "what antigen in present in type o+ and o- blood"
+  },
+  {
+    "question": "Where is the greatest concentration of KFC in the world"
+  },
+  {
+    "question": "what is negligence in tort ?"
+  },
+  {
+    "question": "what teams won super bowl"
+  },
+  {
+    "question": "What is the capital of Nigeria?"
+  },
+  {
+    "question": "how frequently does tourettes occur"
+  },
+  {
+    "question": "what is the meaning of word aztecs"
+  },
+  {
+    "question": "what country is madrid spain in"
+  },
+  {
+    "question": "how many days it take for neptune to orbit once"
+  },
+  {
+    "question": "who build the san juan capistrano mission"
+  },
+  {
+    "question": "Discuss the role of innovation and technology in driving economic growth in Nigeria."
+  },
+  {
+    "question": "what form of decay does not change the atomic number of them decaying atom ?"
+  },
+  {
+    "question": "What is motorcycle speedway racing"
+  },
+  {
+    "question": "who owns hamburger helper"
+  },
+  {
+    "question": "what is scurvy disease"
+  },
+  {
+    "question": "How many seconds in a year"
+  },
+  {
+    "question": "Can you explain the role of traditional rulers in contemporary Nigerian society?"
+  },
+  {
+    "question": "where do flesh eating bacteria live"
+  },
+  {
+    "question": "what type of light does digital alarm clock use"
+  },
+  {
+    "question": "how much of earth is covered ocean water"
+  },
+  {
+    "question": "how are pointe shoes made"
+  },
+  {
+    "question": "how fire extinguisher works"
+  },
+  {
+    "question": "what is a php application"
+  },
+  {
+    "question": "What is the complete ground state electron configuration for the iron atom"
+  },
+  {
+    "question": "who does afge represent"
+  },
+  {
+    "question": "what causes cardiomyopathy"
+  },
+  {
+    "question": "How many pages of text can you store onto a cd ?"
+  },
+  {
+    "question": "when did the civil war start and where"
+  },
+  {
+    "question": "Explain the concept of absolute value."
+  },
+  {
+    "question": "where was giovanni schiaparelli born ?"
+  },
+  {
+    "question": "what are leaf lobe"
+  },
+  {
+    "question": "what does 3g network mean"
+  },
+  {
+    "question": "what is the singer Stevie Wonders full name"
+  },
+  {
+    "question": "what do u give for 9 yr wedding anniversary"
+  },
+  {
+    "question": "where are the kidneys in your body"
+  },
+  {
+    "question": "what is in mylanta"
+  },
+  {
+    "question": "what ancient cultures had marketplaces"
+  },
+  {
+    "question": "What Is the Largest Whale"
+  },
+  {
+    "question": "what does peritoneal cavity hold"
+  },
+  {
+    "question": "how many feet in an acre"
+  },
+  {
+    "question": "what does a silver dollar 1873 coin look like"
+  },
+  {
+    "question": "What is a matrix in mathematics?"
+  },
+  {
+    "question": "what is in chapstick ?"
+  },
+  {
+    "question": "what is the half life of potassium 40"
+  },
+  {
+    "question": "what is a medallion guarantee"
+  },
+  {
+    "question": "how did the tarantula get its name ?"
+  },
+  {
+    "question": "Who is the President?"
+  },
+  {
+    "question": "what is an intradermal nevus"
+  },
+  {
+    "question": "who is the guy in the wheelchair who is smart"
+  },
+  {
+    "question": "What is the main disadvantage of using algorithms"
+  },
+  {
+    "question": "What culture is it that children do not look adults in the eyes ?"
+  },
+  {
+    "question": "how do i measure the shot put throw"
+  },
+  {
+    "question": "what are the quad muscles"
+  },
+  {
+    "question": "what is a vm server"
+  },
+  {
+    "question": "what kind of earthquake was haiti"
+  },
+  {
+    "question": "how did the vietnam war end"
+  },
+  {
+    "question": "how does taste differ from the other senses ?"
+  },
+  {
+    "question": "what is the mortality rate for lightning strikes"
+  },
+  {
+    "question": "what is the population of north america"
+  },
+  {
+    "question": "what does it mean if i 'm flat footed ?"
+  },
+  {
+    "question": "what is human chorionic"
+  },
+  {
+    "question": "where does matt hasselbeck live"
+  },
+  {
+    "question": "how is rfid tag powered"
+  },
+  {
+    "question": "what is standard deviation in statistics"
+  },
+  {
+    "question": "who did james bond work for"
+  },
+  {
+    "question": "what does freedom of speech cover"
+  },
+  {
+    "question": "What is Nollywood and why is it significant?"
+  },
+  {
+    "question": "what types of muscles are those of the swallowing mechanism ?"
+  },
+  {
+    "question": "How does a GPS system determine location?"
+  },
+  {
+    "question": "Explain the significance of the Great Wall of China."
+  },
+  {
+    "question": "what is the real name of a white tiger"
+  },
+  {
+    "question": "where is vitamin d found"
+  },
+  {
+    "question": "what is BB statistics"
+  },
+  {
+    "question": "What were the causes and consequences of the Cold War?"
+  },
+  {
+    "question": "when was the ancient greek republic was formed and on what date"
+  },
+  {
+    "question": "what is wheat grain found in ?"
+  },
+  {
+    "question": "what month is the president inaugurated"
+  },
+  {
+    "question": "what is plural for platypus"
+  },
+  {
+    "question": "what kind of citrus comes from cuba"
+  },
+  {
+    "question": "what is sexual reproductive health rights ?"
+  },
+  {
+    "question": "what is cubic ft"
+  },
+  {
+    "question": "what is bracketing in photography"
+  },
+  {
+    "question": "What is sign of cancer"
+  },
+  {
+    "question": "what is a bus adapter in a computer ?"
+  },
+  {
+    "question": "how a vul works"
+  },
+  {
+    "question": "how many cells are produced during the cell cycle"
+  },
+  {
+    "question": "what are the catholic gifts of the holy spirit"
+  },
+  {
+    "question": "what is the biggest virus"
+  },
+  {
+    "question": "what does it mean to take communion in the catholic church"
+  },
+  {
+    "question": "Explain the principle of conservation of energy."
+  },
+  {
+    "question": "what is a good bmi"
+  },
+  {
+    "question": "What is urban planning and why is it important?"
+  },
+  {
+    "question": "what is the symbol for euro"
+  },
+  {
+    "question": "what major agencies are studying earthquakes"
+  },
+  {
+    "question": "What is caused by the human immunodeficiency virus ?"
+  },
+  {
+    "question": "how much is a yen coin"
+  },
+  {
+    "question": "What is the distance between the Earth and the Sun?"
+  },
+  {
+    "question": "how many lungs does a human have"
+  },
+  {
+    "question": "how did anne frank die"
+  },
+  {
+    "question": "how long does it take for seahorses to mate ?"
+  },
+  {
+    "question": "when was the labor union formed"
+  },
+  {
+    "question": "what was muhammad 's vision"
+  },
+  {
+    "question": "who replaced nikita khrushchev"
+  },
+  {
+    "question": "what are the largest islands in the world"
+  },
+  {
+    "question": "what is the main type of restaurant"
+  },
+  {
+    "question": "when was jesus baptized"
+  },
+  {
+    "question": "when did they show cartoons in movie theaters"
+  },
+  {
+    "question": "what does it mean when isaiah of the bible in chapter 55 : verses 8,9 mean"
+  },
+  {
+    "question": "who is the writer of the beowulf poem ?"
+  },
+  {
+    "question": "what greek god is a hunter"
+  },
+  {
+    "question": "What role does the family play in Nigerian culture?"
+  },
+  {
+    "question": "what is general average sacrifice"
+  },
+  {
+    "question": "what was the Name the first electronic handheld calculator"
+  },
+  {
+    "question": "what is a base SI unit"
+  },
+  {
+    "question": "What were the major economic activities of the early Canadians"
+  },
+  {
+    "question": "what wavelengths are the most harmful on the em spectrum"
+  },
+  {
+    "question": "what causes thunder sound"
+  },
+  {
+    "question": "how many people live in africa"
+  },
+  {
+    "question": "How to make money"
+  },
+  {
+    "question": "what is bones job"
+  },
+  {
+    "question": "what does automatic paper feeder on printers mean"
+  },
+  {
+    "question": "What is the importance of the Great Wall of China in history?"
+  },
+  {
+    "question": "where to buy potato bread made without wheat"
+  },
+  {
+    "question": "what are the ingredients of alka-seltzer"
+  },
+  {
+    "question": "What is cultural globalization?"
+  },
+  {
+    "question": "what are some animals in a tigers environment"
+  },
+  {
+    "question": "what congressional district am i in"
+  },
+  {
+    "question": "what does a roman numeral L stand for ?"
+  },
+  {
+    "question": "where does acid from stomach originate ?"
+  },
+  {
+    "question": "when was america pioneered"
+  },
+  {
+    "question": "How does the human digestive system work?"
+  },
+  {
+    "question": "What is the importance of oral tradition?"
+  },
+  {
+    "question": "what is RFID equipment"
+  },
+  {
+    "question": "Who owns Google"
+  },
+  {
+    "question": "what are grits made from"
+  },
+  {
+    "question": "how many babies are in a typical raccoon litter"
+  },
+  {
+    "question": "where do prosecutors get evidence for criminal court"
+  },
+  {
+    "question": "how many men does the military have in it"
+  },
+  {
+    "question": "where is smoked salmon from"
+  },
+  {
+    "question": "How do mountains affect climate?"
+  },
+  {
+    "question": "what year was air conditioning created"
+  },
+  {
+    "question": "what is the united nations and what is its role in the world"
+  },
+  {
+    "question": "what county is St. Elizabeth MO in"
+  },
+  {
+    "question": "how did magic johnson get aids"
+  },
+  {
+    "question": "what kind of potential is created after a neuron is excited"
+  },
+  {
+    "question": "who played in the 2010 NBA Finals"
+  },
+  {
+    "question": "who rules communism government"
+  },
+  {
+    "question": "how many stripes on the flag"
+  },
+  {
+    "question": "how does an earthworm eat & digests food ."
+  },
+  {
+    "question": "What are the major parts of the human brain and their functions?"
+  },
+  {
+    "question": "how long is the term for federal judges"
+  },
+  {
+    "question": "Who is the richest person in the country?"
+  },
+  {
+    "question": "what is hdmi out"
+  },
+  {
+    "question": "what does life insurance cover ?"
+  },
+  {
+    "question": "how long can you be in the supreme court"
+  },
+  {
+    "question": "What cheese is made from goat 's milk?"
+  },
+  {
+    "question": "how is canada 's health care"
+  },
+  {
+    "question": "what does add my two cents mean"
+  },
+  {
+    "question": "what is  a siamese cat"
+  },
+  {
+    "question": "Who are some famous authors and poets?"
+  },
+  {
+    "question": "Describe the process of urban sprawl."
+  },
+  {
+    "question": "who built the globe"
+  },
+  {
+    "question": "how does a steam engine work"
+  },
+  {
+    "question": "how many jets fly with the president 's plane"
+  },
+  {
+    "question": "what is a fret on a guitar"
+  },
+  {
+    "question": "how many series in hockey before the stanley cup"
+  },
+  {
+    "question": "How did women work for equal rights during the women 's movement ? Were their efforts successful ?"
+  },
+  {
+    "question": "WHAT IS COLD FLUSH"
+  },
+  {
+    "question": "what percentage of england is christian"
+  },
+  {
+    "question": "where does ground pepper come from"
+  },
+  {
+    "question": "What Is Benzene Used For"
+  },
+  {
+    "question": "what font does a business letter require"
+  },
+  {
+    "question": "what is `` my computer '' called for windows 7"
+  },
+  {
+    "question": "what is flour made from"
+  },
+  {
+    "question": "What were the historical kingdoms and empires in what is now Nigeria?"
+  },
+  {
+    "question": "what is a dogs classification"
+  },
+  {
+    "question": "what do maggots turn into to ?"
+  },
+  {
+    "question": "what are SATA Power Connector"
+  },
+  {
+    "question": "where are Giant Panda Bears found ?"
+  },
+  {
+    "question": "Explain the properties of exponents."
+  },
+  {
+    "question": "when did abraham lincoln write the emancipation proclamation ? ?"
+  },
+  {
+    "question": "what percentage of people get an education"
+  },
+  {
+    "question": "how do pineapples grow"
+  },
+  {
+    "question": "What are the different types of galaxies?"
+  },
+  {
+    "question": "Who was the first person to walk on the moon?"
+  },
+  {
+    "question": "How do bees communicate and organize within a hive?"
+  },
+  {
+    "question": "How do antibiotics work to fight bacterial infections?"
+  },
+  {
+    "question": "Describe the challenges of managing water resources."
+  },
+  {
+    "question": "How do you calculate the volume of a cylinder?"
+  },
+  {
+    "question": "when did daylight savings time start"
+  },
+  {
+    "question": "what does the temporal lobe part of the brain do"
+  },
+  {
+    "question": "What are the causes of the Great Depression in the 1930s?"
+  },
+  {
+    "question": "Describe the process of desertification."
+  },
+  {
+    "question": "Explain the difference between kinetic and potential energy."
+  },
+  {
+    "question": "where is Chayanne from ?"
+  },
+  {
+    "question": "What is the significance of the Federal Character Principle in Nigeria?"
+  },
+  {
+    "question": "what can electrical energy be transformed into"
+  },
+  {
+    "question": "how much is 7 teaspoons '"
+  },
+  {
+    "question": "What is the structure of the federal government in Nigeria?"
+  },
+  {
+    "question": "when did the civil rights movement begin"
+  },
+  {
+    "question": "how old is kurt cobain 's daughter"
+  },
+  {
+    "question": "Describe how to calculate compound interest."
+  },
+  {
+    "question": "What are some contemporary Nigerian fashion trends?"
+  },
+  {
+    "question": "how many whales are in the world"
+  },
+  {
+    "question": "what is in black and white pudding"
+  },
+  {
+    "question": "what year did aerosmith i dont want to miss a thing"
+  },
+  {
+    "question": "who invented the internet"
+  },
+  {
+    "question": "what is squash the sport"
+  },
+  {
+    "question": "Describe the judicial system of Nigeria."
+  },
+  {
+    "question": "how long before symptoms of deadly mushrooms"
+  },
+  {
+    "question": "question: \"What is the population of Lagos"
+  },
+  {
+    "question": "how does the brain process language"
+  },
+  {
+    "question": "What group took home the award for best rock album at the Australian Recording Industry Association ( ARIA ) Music Awards ?"
+  },
+  {
+    "question": "what is white chocolate made of"
+  },
+  {
+    "question": "what is us dollar worth based on"
+  },
+  {
+    "question": "where did hurricane katrina begin"
+  },
+  {
+    "question": "who owns exxon mobil"
+  },
+  {
+    "question": "What are some Nigerian contributions to world music?"
+  },
+  {
+    "question": "What was the impact of the printing press?"
+  },
+  {
+    "question": "What is and where is hydraulic fluid found and used for"
+  },
+  {
+    "question": "How does Nigerian pop culture address social issues?"
+  },
+  {
+    "question": "what is the capital city of Kaduna State?"
+  },
+  {
+    "question": "how many acres is fair park"
+  },
+  {
+    "question": "who was the first civilian to make a magnetic compass"
+  },
+  {
+    "question": "where is marvin gaye from"
+  },
+  {
+    "question": "What implication ( s ) does the law of conservation of matter have for humans ?"
+  },
+  {
+    "question": "who discovered planet neptune"
+  },
+  {
+    "question": "how big do sebaceous cysts get"
+  },
+  {
+    "question": "when does air bag deploy"
+  },
+  {
+    "question": "how many decatherms in a therm"
+  },
+  {
+    "question": "how is the ejection fraction measured"
+  },
+  {
+    "question": "What is Pan-Africanism and who were its main proponents?"
+  },
+  {
+    "question": "what is diet pepsi flavored with"
+  },
+  {
+    "question": "How will I feel after my Rhizotomy surgery ?"
+  },
+  {
+    "question": "who was the first to argue that the sun was the center of the universe"
+  },
+  {
+    "question": "what is darwin 's origin of species"
+  },
+  {
+    "question": "how many people in world today"
+  },
+  {
+    "question": "what year did peyton manning get drafted"
+  },
+  {
+    "question": "when a seahorses mate die do they die"
+  },
+  {
+    "question": "What is a superconductor?"
+  },
+  {
+    "question": "How do airplanes stay in the air?"
+  },
+  {
+    "question": "What are some traditional clothing styles?"
+  },
+  {
+    "question": "what is vitamin b12 used for"
+  },
+  {
+    "question": "How has Nigeria's literature contributed to African and global literature?"
+  },
+  {
+    "question": "What is the national bird?"
+  },
+  {
+    "question": "What is the speed of light?"
+  },
+  {
+    "question": "who designed the georgian colonial house styles"
+  },
+  {
+    "question": "what is sanskrit shri"
+  },
+  {
+    "question": "what antibodies are produced in large quantities"
+  },
+  {
+    "question": "what is an information technology manager"
+  },
+  {
+    "question": "how can a territory become a state"
+  },
+  {
+    "question": "what year was the 8 track invented"
+  },
+  {
+    "question": "what year did martin luther king die"
+  },
+  {
+    "question": "how many days does the chinese new year last"
+  },
+  {
+    "question": "Who Started the Mormon Church"
+  },
+  {
+    "question": "Where are most of the natural gas"
+  },
+  {
+    "question": "who is the CEO OF FACEBOOK"
+  },
+  {
+    "question": "what machines are called Les Flippers in France ?"
+  }
 ]
