@@ -139,7 +139,7 @@ export default function DataTable() {
     if (selectedDataset === 'Sample data') {
       setData(wikiqa);
     }
-    setSelectedSize(data.length);
+    setSelectedSize(10);
   }, [selectedDataset, data]);
 
   useEffect(() => {
@@ -217,7 +217,7 @@ export default function DataTable() {
   <SelectTrigger className="w-36">
     <Flex justify="start" gap="3" align="center">
       <RulerHorizontalIcon/>
-      <SelectValue placeholder="All" />
+      <SelectValue placeholder="10 samples" />
     </Flex>
   </SelectTrigger>
   <SelectContent>

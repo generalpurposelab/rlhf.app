@@ -33,11 +33,11 @@ export default function DataTable() {
   <Text size="2" style={{ color: 'black' }}>
   <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
   <li style={{ marginBottom: '5px' }}>Click the <Kbd ><Database className="mr-1 h-2 w-2" /> Dataset</Kbd> dropdown button to select the dataset you want to use.</li>
-    <li style={{ marginBottom: '5px' }}>Upload your own dataset (in <Link weight="medium" underline="always" href="https://github.com/generalpurposelab/rlhf.app/blob/main/app/prompts/wikiqa.json">this format</Link>), or choose the <i>Test data</i> dataset, taken from <Link weight="medium" underline="always" href="https://www.microsoft.com/en-us/download/details.aspx?id=52419">WikiQA</Link>.</li>
-    <li style={{ marginBottom: '5px' }}>Click the <Kbd ><GlobeIcon className="mr-1 h-2 w-2"/> Select language</Kbd> dropdown button to select the language you want to translate the prompt dataset to.</li>
+    <li style={{ marginBottom: '5px' }}>The app defaults to <i>Sample data</i> based on <Link weight="medium" underline="always" href="https://www.microsoft.com/en-us/download/details.aspx?id=52419">WikiQA</Link> but you can upload your own dataset (in <Link weight="medium" underline="always" href="https://github.com/generalpurposelab/rlhf.app/blob/main/app/prompts/wikiqa.json">this format</Link>).</li>
+    <li style={{ marginBottom: '5px' }}>Click the <Kbd ><GlobeIcon className="mr-1 h-2 w-2"/> Select language</Kbd> dropdown button to select the language you want to translate the prompt dataset to (it defaults to Yoruba).</li>
     <li style={{ marginBottom: '5px' }}>Click the <Kbd >Generate</Kbd> button in the bottom right hand corner to generate translations.</li>
     <li style={{ marginBottom: '5px' }}>Edit the translations until they are correct.</li>
-    <li style={{ marginBottom: '5px' }}>Once you are happy with the translations, you can click <Kbd style={{ backgroundColor: 'black', color: 'white' }}><Download className="mr-1 h-2 w-2" style={{ color: 'white' }}/> Download</Kbd> to download them locally, or click the <Kbd ><DashboardIcon className="mr-1 h-2 w-2"/>Translate completions</Kbd> button in the left sidebar to continue.</li>
+    <li style={{ marginBottom: '5px' }}>Once you are happy with the translations, you can click <Kbd style={{ backgroundColor: 'black', color: 'white' }}><Download className="mr-1 h-2 w-2" style={{ color: 'white' }}/> Download</Kbd> to download them locally.</li>
   </ul>
 </Text>
   </Box>
@@ -59,10 +59,10 @@ export default function DataTable() {
   <Heading size="3" style={{ marginBottom: '10px' }}>Translate completions</Heading>
   <Text size="2" style={{ color: 'black' }}>
   <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
-  <li style={{ marginBottom: '5px' }}>Your prompts will appear here automatically. To add other data, click the <Kbd><Database className="mr-1 h-2 w-2" /> Dataset</Kbd> dropdown button to upload your own dataset (in <Link weight="medium" underline="always" href="https://github.com/generalpurposelab/rlhf.app/blob/main/app/prompts/wikiqa.json">this format</Link>).</li>
-  <li style={{ marginBottom: '5px' }}>Click the <Kbd ><RulerHorizontalIcon className="mr-1 h-2 w-2" />samples</Kbd> dropdown at the top to choose how many samples you want to generate.</li>
+  <li style={{ marginBottom: '5px' }}>Click the <Kbd><Database className="mr-1 h-2 w-2" /> Dataset</Kbd> dropdown button to upload the dataset you just created, or custom data in <Link weight="medium" underline="always" href="https://github.com/generalpurposelab/rlhf.app/blob/main/app/prompts/wikiqa.json">this format</Link>. It defaults to a test dataset in Yoruba.</li>
+  <li style={{ marginBottom: '5px' }}>Click the <Kbd ><RulerHorizontalIcon className="mr-1 h-2 w-2" />samples</Kbd> dropdown at the top to choose how many samples you want to generate. It defaults to 3.</li>
     <li style={{ marginBottom: '5px' }}>Click the <Kbd >Generate</Kbd> button in the bottom right hand corner to generate translations.</li>
-    <li style={{ marginBottom: '5px' }}>Choose the most accurate answer from the multiple answers provided, and then edit it so it is <b>truthful</b>, <b>harmless</b>, <b>culturally relevant</b>, and <b>helpful</b>. Hover over the badges on the right of the page to learn more.</li>
+    <li style={{ marginBottom: '5px' }}>Choose the most accurate answer from the multiple answers provided, and then edit it so it is <b>truthful</b>, <b>harmless</b>, <b>culturally relevant</b>, and <b>helpful</b>. Hover over the badges on the right of the page for definitions.</li>
     <li style={{ marginBottom: '5px' }}>Once you are happy with the answer, click <Kbd ><ChevronRightIcon className="mr-1 h-2 w-2" /> Next</Kbd> to go to the next question and repeat these steps.</li>
     <li style={{ marginBottom: '5px' }}>Once you have finished, click <Kbd style={{ backgroundColor: 'black', color: 'white' }}><Download className="mr-1 h-2 w-2" style={{ color: 'white' }}/> Download</Kbd> to download them locally.</li>
   </ul>
