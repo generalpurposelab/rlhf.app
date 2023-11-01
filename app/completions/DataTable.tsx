@@ -39,7 +39,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-
+import { logCompletions } from "@/lib/supabase"
 import { callOSS, callOpenai, callLlama, callMistral } from "@/lib/llms"
 import { RiOpenaiFill } from 'react-icons/ri';
 import { BsMeta } from 'react-icons/bs';
@@ -64,7 +64,7 @@ function DataTable() {
   const [isLoading, setIsLoading] = useState(false); 
   const [number, setNumber] = useState(3);
   const [outputs, setOutputs] = useState<{ [key: number]: { selected: boolean; result: string; }[][] }>([]);  
-  const [position, setPosition] = useState("Test data")
+  const [position, setPosition] = useState("Sample data")
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [data, setData] = useState<{ question: string; answer: string; }[]>([]);
   const { toast } = useToast()
@@ -118,7 +118,7 @@ function DataTable() {
     output: string;
   }
 
-  const downloadOutputs = () => {
+  const downloadOutputs = async () => {
     const processedOutputs = Object.keys(outputs).reduce<{ [key: string]: Output[] }>((acc, key) => {
       acc[key] = outputs[Number(key)].flat()
         .filter(output => output.selected)
@@ -130,6 +130,7 @@ function DataTable() {
     }, {});
   
     const dataStr = JSON.stringify(processedOutputs);
+    await logCompletions(dataStr);
     const dataBlob = new Blob([dataStr], { type: "application/json" });
     const url = URL.createObjectURL(dataBlob);
     const link = document.createElement('a');
@@ -280,7 +281,7 @@ function DataTable() {
 <DropdownMenuTrigger asChild>
   <Button variant="outline">
     <Database className="mr-2 h-4 w-4"/>
-    <span>Dataset</span>
+    <span>{position}</span>
   </Button>
 </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
@@ -291,9 +292,9 @@ function DataTable() {
           <Database className="mr-2 h-4 w-4" />
             <span>System data</span>
           </DropdownMenuRadioItem>
-        <DropdownMenuRadioItem value="Test data" onSelect={() => setData(prompts)}>
+        <DropdownMenuRadioItem value="Sample data" onSelect={() => setData(prompts)}>
           <FlaskConical className="mr-2 h-4 w-4" />
-            <span>Test data</span>
+            <span>Sample data</span>
           </DropdownMenuRadioItem>
           
           <DropdownMenuRadioItem value="Custom" onSelect={() => fileInputRef.current?.click()}>

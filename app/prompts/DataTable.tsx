@@ -51,11 +51,12 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { useToast } from "@/components/ui/use-toast"
+import { logPrompts } from "@/lib/supabase"
 
 export default function DataTable() {
   
   const [data, setData] = useState<any[]>([]);
-  const [selectedDataset, setSelectedDataset] = useState<string>("Test data");
+  const [selectedDataset, setSelectedDataset] = useState<string>("Sample data");
   const [language, setLanguage] = useState<string>("Yoruba");
   const [selectedSize, setSelectedSize] = useState<number>();
   const [completions, setCompletions] = useState<Record<string, any>>({});
@@ -114,9 +115,10 @@ export default function DataTable() {
     setCompletions(prev => ({ ...prev, [prompt]: value }));
   }
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
     const dataArr = Object.values(completions).map(answer => ({ question: answer }));
     const dataStr = JSON.stringify(dataArr);
+    await logPrompts(dataStr);
     const dataBlob = new Blob([dataStr], { type: "application/json" });
     const url = URL.createObjectURL(dataBlob);
     const link = document.createElement('a');
@@ -134,7 +136,7 @@ export default function DataTable() {
   };
 
   useEffect(() => {
-    if (selectedDataset === 'Test data') {
+    if (selectedDataset === 'Sample data') {
       setData(wikiqa);
     }
     setSelectedSize(data.length);
@@ -186,7 +188,7 @@ export default function DataTable() {
       <Text style={{ color: 'black' }}>
   <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
   <li style={{ marginBottom: '10px' }}>Click the <Kbd style={{ backgroundColor: '#f2f2f2', borderRadius: '5px' }}><Database className="mr-1 h-2 w-2" /> Dataset</Kbd> dropdown button to select the dataset you want to use.</li>
-    <li style={{ marginBottom: '10px' }}>You can either upload your own dataset (which should be in <Link weight="medium" underline="always" href="https://github.com/generalpurposelab/rlhf.app/blob/main/app/prompts/wikiqa.json">this format</Link>), or choose the <Em>Test data</Em> dataset, which is taken from <Link weight="medium" underline="always" href="https://www.microsoft.com/en-us/download/details.aspx?id=52419">WikiQA</Link>.</li>
+    <li style={{ marginBottom: '10px' }}>You can either upload your own dataset (which should be in <Link weight="medium" underline="always" href="https://github.com/generalpurposelab/rlhf.app/blob/main/app/prompts/wikiqa.json">this format</Link>), or choose the <Em>Sample data</Em> dataset, which is taken from <Link weight="medium" underline="always" href="https://www.microsoft.com/en-us/download/details.aspx?id=52419">WikiQA</Link>.</li>
     <li style={{ marginBottom: '10px' }}>Click the <Kbd style={{ backgroundColor: '#f2f2f2', borderRadius: '5px' }}><GlobeIcon className="mr-1 h-2 w-2"/> Select language</Kbd>dropdown button to select the language you want to translate the prompt dataset to.</li>
     <li style={{ marginBottom: '10px' }}>Click the <Kbd style={{ backgroundColor: '#f2f2f2', borderRadius: '5px' }}>Generate</Kbd> button in the bottom right hand corner to generate translations.</li>
     <li style={{ marginBottom: '10px' }}>Edit the translations until they are correct.</li>
@@ -323,12 +325,12 @@ export default function DataTable() {
 
       <DropdownMenu>
 <DropdownMenuTrigger asChild>
-  <Button variant="outline" className="w-36">
+  <Button variant="outline" className="w-40">
 
   <Flex justify="between" align="center" grow="1">
     <Flex align="center">
     <Database className="mr-2 h-4 w-4" />
-    <span>Dataset</span>
+    <span>{selectedDataset}</span>
 
     </Flex>
     <ChevronDownIcon/>
@@ -336,7 +338,7 @@ export default function DataTable() {
 
   </Button>
 </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-36">
+      <DropdownMenuContent className="w-40">
         <DropdownMenuLabel className="text-center">Data source</DropdownMenuLabel>
         <DropdownMenuSeparator />
 
@@ -345,9 +347,9 @@ export default function DataTable() {
     setSelectedDataset(value);
 
 }}>
-  <DropdownMenuRadioItem value="Test data">
+  <DropdownMenuRadioItem value="Sample data">
     <Database className="mr-2 h-4 w-4" />
-    <span>Test data</span>
+    <span>Sample data</span>
   </DropdownMenuRadioItem>
   {/* 
   <DropdownMenuRadioItem value="squad">
