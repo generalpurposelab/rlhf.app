@@ -410,7 +410,7 @@ function DataTable() {
               <li>language. <b>Don’t just repeat</b> what the user has already said.</li>
               <li>If a direction seems unclear, ask the user for more details,</li>
               <li>explaining why you need more info. <b>Don’t assume</b> things that</li>
-              <li>the user didn't mention, except for general knowledge.</li>               
+              <li>the user didn't mention except for general knowledge.</li>               
             </ul>
           </TooltipContent>
         </Tooltip>
