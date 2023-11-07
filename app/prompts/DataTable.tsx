@@ -259,7 +259,7 @@ export default function DataTable() {
 </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent className={buttonWidthClass} >
-      <DropdownMenuLabel className="text-center">Language</DropdownMenuLabel>
+      <DropdownMenuLabel className="text-center">Language here</DropdownMenuLabel>
       <DropdownMenuSeparator />
       <DropdownMenuRadioGroup 
         value={language} 
