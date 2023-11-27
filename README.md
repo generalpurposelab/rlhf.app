@@ -34,4 +34,4 @@ You will need to use the environment variables [defined in `.env.local.example`]
 
 ## Authors
 
-This library is created by [Equiano Institute](https://equiano.institute) and [General Purpose](https://general-purpose.io) team members, with contributions from:
+This library is created by [Equiano Institute](https://equiano.institute), [Masakhane](https://www.masakhane.io/), and [General Purpose](https://general-purpose.io) team members.
