@@ -16,15 +16,25 @@ rlhf.app is an open-source platform for fine-tuning LLMs in low-resource languag
 </p>
 <br/>
 
+## Instructions
+
+```
+npm install
+```
+
+```
+npm run dev
+```
+
 ## Features
-- *Supervised fine-tuning* - generate translations for prompt libraries based on publicly available set of question and sentence pairs like WikiQA, and generate editable outputs
-- *Preference tuning (RLHF and more)* - coming soon
-- *Scalable evaluation* - coming soon
+
+- _Supervised fine-tuning_ - generate translations for prompt libraries based on publicly available set of question and sentence pairs like WikiQA, and generate editable outputs
+- _Preference tuning (RLHF and more)_ - coming soon
+- _Scalable evaluation_ - coming soon
 
 ## Model Providers
 
 This template ships with GPT 3.5, GPT 4, Llama 2, and Mistral-7B-Instruct-v0.1. However, you can switch LLM providers by changing [a few lines of code](https://github.com/ebayes/rlhf/blob/main/lib/llms.js).
-
 
 ## Running locally
 
