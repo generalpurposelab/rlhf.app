@@ -17,37 +17,36 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+    title: "Translate Prompts",
+    href: "/prompts",
+    description: "Edit the translations until they are correct.",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
+    title: "Translate completions",
+    href: "/completions",
     description:
-      "For sighted users to preview content available behind a link.",
+      "Upload the dataset you just created, or custom data in this format. It defaults to a test dataset in Yoruba.",
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
+    title: "Custom Data",
+    href: "/completions",
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "Choose the most accurate answer from the multiple answers provided, and then edit it so it is truthful, harmless, culturally relevant, and helpful. Hover over the badges on the right of the page for definitions.",
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
+    title: "Evaluate Outputs",
+    href: "/",
     description: "Visually or semantically separates content.",
   },
   {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
+    title: "Chats",
+    href: "/",
     description:
       "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
   },
   {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
+    title: "Download",
+    href: "/",
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
@@ -79,7 +78,7 @@ export function NavigationBar() {
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Introduction">
+              <ListItem href="/info" title="Introduction">
                 Re-usable components built using Radix UI and Tailwind CSS.
               </ListItem>
               <ListItem href="/docs/installation" title="Installation">
@@ -108,7 +107,7 @@ export function NavigationBar() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/info" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Documentation
             </NavigationMenuLink>
