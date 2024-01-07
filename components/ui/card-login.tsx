@@ -23,10 +23,14 @@ import {
 export function CardLogin() {
   return (
     <Box className="w-[350px] ">
-      <Button variant="outline" className="mr-4 mt-2">
-        Get Started
-      </Button>
-      <Button>Playground</Button>
+      <a href="/info">
+        <Button variant="outline" className="mr-4 mt-2">
+          Get Started
+        </Button>
+      </a>
+      <a href="/completions">
+        <Button>Playground</Button>
+      </a>
     </Box>
   );
 }
